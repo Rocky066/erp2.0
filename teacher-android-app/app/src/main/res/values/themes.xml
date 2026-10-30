@@ -1,0 +1,11 @@
+<resources>
+    <style name="Theme.GarumaraTeacher" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/gold_500</item>
+        <item name="colorOnPrimary">@color/navy_950</item>
+        <item name="colorSecondary">@color/gold_400</item>
+        <item name="android:navigationBarColor">@color/navy_950</item>
+        <item name="android:statusBarColor">@color/navy_950</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+</resources>

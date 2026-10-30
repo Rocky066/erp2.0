@@ -1,0 +1,16 @@
+R_DEF: Internal format may change without notice
+local
+color gold_400
+color gold_500
+color navy_900
+color navy_950
+color white
+drawable ic_launcher
+id offline
+id progress
+id refresh
+id web
+layout activity_main
+style Theme.GarumaraTeacher
+xml file_paths
+xml network_security_config

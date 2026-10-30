@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduPulse Cloud ERP — Next-Gen School Management SaaS Platform</title>
+  <meta name="description" content="Empower your school with EduPulse Cloud ERP. Dedicated school subdomains, automated WhatsApp attendance alerts, fee collection ledger, exams, and isolated tenant security.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#1e3a8a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" href="/logo.jpg" type="image/jpeg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+    .glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(51, 65, 85, 0.6);
+    }
+    .gradient-border {
+      border: 1px solid transparent;
+      background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)) padding-box,
+                  linear-gradient(135deg, rgba(59, 130, 246, 0.5), rgba(99, 102, 241, 0.5)) border-box;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans selection:bg-blue-600 selection:text-white min-h-screen flex flex-col">
+
+  <!-- ========================================== -->
+  <!-- 1. TOP ANNOUNCEMENT BANNER                  -->
+  <!-- ========================================== -->
+  <div class="bg-gradient-to-r from-blue-700 via-indigo-600 to-blue-700 text-white text-xs py-2 px-4 text-center font-bold tracking-wide flex items-center justify-center space-x-2">
+    <span class="bg-white/20 uppercase text-[10px] px-2 py-0.5 rounded-full font-extrabold tracking-wider">NEW</span>
+    <span>⚡ Instant School Subdomain Generation & Meta WhatsApp Attendance Automation is now live!</span>
+    <a href="#demo" class="underline hover:text-blue-100 hidden sm:inline ml-1 font-semibold">Request Free 30-Day Trial &rarr;</a>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 2. NAVIGATION BAR                          -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-50 bg-slate-900/85 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="/" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-xl font-black text-white shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform">
+          ⚡
+        </div>
+        <div>
+          <span class="text-base sm:text-lg font-black tracking-tight text-white block leading-tight">EduPulse <span class="text-blue-400">Cloud</span></span>
+          <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">School ERP SaaS Platform</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center space-x-7 text-xs font-bold text-slate-300">
+        <a href="#features" class="hover:text-blue-400 transition-colors">Features</a>
+        <a href="#portals" class="hover:text-blue-400 transition-colors">Portals</a>
+        <a href="#product-tour" class="hover:text-blue-400 transition-colors">Product Tour</a>
+        <a href="#pricing" class="hover:text-blue-400 transition-colors">Pricing</a>
+        <a href="/about" class="hover:text-blue-400 transition-colors">About Us</a>
+        <a href="/contact" class="hover:text-blue-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden sm:flex items-center space-x-3">
+        <a href="/login" class="bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white px-3.5 py-2 rounded-xl text-xs font-bold transition-all border border-slate-700 flex items-center space-x-1.5">
+          <span>🏫</span>
+          <span>School Login</span>
+        </a>
+        <a href="#demo" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-xl text-xs font-bold shadow-lg shadow-blue-600/20 transition-all flex items-center space-x-1.5">
+          <span>✨</span>
+          <span>Book Free Demo</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-400 hover:text-white rounded-lg focus:outline-none" aria-label="Toggle Navigation">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-b border-slate-800 px-6 py-5 space-y-3 text-xs font-bold text-slate-300">
+      <a href="#features" class="block py-2 hover:text-blue-400">Features</a>
+      <a href="#portals" class="block py-2 hover:text-blue-400">Portals</a>
+      <a href="#product-tour" class="block py-2 hover:text-blue-400">Product Tour</a>
+      <a href="#pricing" class="block py-2 hover:text-blue-400">Pricing</a>
+      <a href="/about" class="block py-2 hover:text-blue-400">About Us</a>
+      <a href="/contact" class="block py-2 hover:text-blue-400">Contact Us</a>
+      <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
+        <a href="/login" class="w-full text-center bg-slate-800 text-slate-200 py-2.5 rounded-xl">School Login</a>
+        <a href="#demo" class="w-full text-center bg-blue-600 text-white py-2.5 rounded-xl">Book Free Demo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- 3. HERO SECTION                            -->
+  <!-- ========================================== -->
+  <section class="relative overflow-hidden py-16 sm:py-24 border-b border-slate-800/80 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-950/40 via-slate-950 to-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 relative z-10">
+      
+      <!-- Eyebrow Pill -->
+      <div class="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-3.5 py-1.5 rounded-full text-blue-400 text-xs font-bold">
+        <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
+        <span>The Enterprise Multi-Tenant School ERP SaaS</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight max-w-4xl mx-auto leading-tight sm:leading-none">
+        Transform Your School with Dedicated <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-blue-500">Cloud Subdomains</span> & Smart Automation
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        Say goodbye to outdated legacy software. Provide your school with an isolated tenant instance, automated WhatsApp attendance alerts, online fee collection, exam marksheet generation, and dedicated portals for Admins, Teachers, and Parents.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
+        <a href="#demo" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-xl shadow-blue-600/25 transition-all flex items-center justify-center space-x-2">
+          <span>🚀 Request Free 30-Day School Demo</span>
+        </a>
+        <a href="#pricing" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl border border-slate-700 transition-all flex items-center justify-center space-x-2">
+          <span>💳 Explore Plans & Pricing</span>
+        </a>
+        <a href="/login" class="w-full sm:w-auto bg-slate-900/60 hover:bg-slate-800 text-slate-300 hover:text-white font-bold text-xs sm:text-sm px-5 py-3.5 rounded-xl border border-slate-800 transition-all flex items-center justify-center space-x-1.5">
+          <span>🔍 Find My School</span>
+        </a>
+      </div>
+
+      <!-- Trust Pillars / Metrics -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8">
+        <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-2xl">
+          <p class="text-xl sm:text-2xl font-black text-white font-mono">100%</p>
+          <p class="text-[11px] text-slate-400 font-semibold mt-0.5">Tenant Data Isolation</p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-2xl">
+          <p class="text-xl sm:text-2xl font-black text-emerald-400 font-mono">99.9%</p>
+          <p class="text-[11px] text-slate-400 font-semibold mt-0.5">Cloud High Availability</p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-2xl">
+          <p class="text-xl sm:text-2xl font-black text-blue-400 font-mono">Instant</p>
+          <p class="text-[11px] text-slate-400 font-semibold mt-0.5">WhatsApp / SMS Alerts</p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-2xl">
+          <p class="text-xl sm:text-2xl font-black text-amber-400 font-mono">Zero</p>
+          <p class="text-[11px] text-slate-400 font-semibold mt-0.5">Local Server Hardware</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 4. PRODUCT TOUR & REAL UI PREVIEWS         -->
+  <!-- ========================================== -->
+  <section id="product-tour" class="py-16 sm:py-24 border-b border-slate-800 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center space-y-3 max-w-2xl mx-auto">
+        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Built From Real Educational Workflows</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight">The Complete School Command Center</h2>
+        <p class="text-xs sm:text-sm text-slate-400">Explore authentic interface previews from our production software. Clean, intuitive, and designed for lightning-fast daily operations.</p>
+      </div>
+
+      <!-- Interactive Mockup Card -->
+      <div class="gradient-border rounded-3xl p-4 sm:p-6 shadow-2xl space-y-6">
+        
+        <!-- Mockup Browser Header -->
+        <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+          <div class="flex items-center space-x-2">
+            <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+          </div>
+          <div class="bg-slate-900 px-4 py-1.5 rounded-lg border border-slate-800 text-[11px] font-mono text-slate-400 flex items-center space-x-2">
+            <span class="text-emerald-400">🔒 https://</span>
+            <span class="text-white font-bold">national-academy.schoolerp.in/admin</span>
+          </div>
+          <span class="text-[11px] text-blue-400 font-bold hidden sm:inline">Active Tenant Session</span>
+        </div>
+
+        <!-- Dashboard UI Showcase Preview -->
+        <div class="space-y-6">
+          
+          <!-- KPI Row -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+              <span class="text-[10px] text-slate-400 font-bold uppercase">Total Students</span>
+              <p class="text-xl sm:text-2xl font-black text-white font-mono mt-1">642</p>
+              <span class="text-[10px] text-emerald-400 font-semibold">↑ 100% Verified Profiles</span>
+            </div>
+            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+              <span class="text-[10px] text-slate-400 font-bold uppercase">Today Attendance</span>
+              <p class="text-xl sm:text-2xl font-black text-emerald-400 font-mono mt-1">96.8%</p>
+              <span class="text-[10px] text-slate-400 font-semibold">621 Present · 21 Absent</span>
+            </div>
+            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+              <span class="text-[10px] text-slate-400 font-bold uppercase">Monthly Fee Collection</span>
+              <p class="text-xl sm:text-2xl font-black text-blue-400 font-mono mt-1">₹4,86,500</p>
+              <span class="text-[10px] text-emerald-400 font-semibold">142 Invoices Collected</span>
+            </div>
+            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+              <span class="text-[10px] text-slate-400 font-bold uppercase">Active Faculty</span>
+              <p class="text-xl sm:text-2xl font-black text-amber-400 font-mono mt-1">34</p>
+              <span class="text-[10px] text-slate-400 font-semibold">All Classes Assigned</span>
+            </div>
+          </div>
+
+          <!-- Real Feature Snippets Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <!-- Snippet 1: Fee Ledger & Receipts -->
+            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="font-extrabold text-white text-xs flex items-center space-x-2">
+                  <span>💰</span>
+                  <span>Fee Collection & Digital Receipts</span>
+                </span>
+                <span class="text-[10px] bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-800/40 font-bold">Auto Receipt #REC-2026-084</span>
+              </div>
+              <p class="text-slate-400 text-xs">Configure session-wise fee structures, capture partial dues, print thermal or A4 receipts, and dispatch instant WhatsApp fee confirmation directly to parents.</p>
+              <div class="bg-slate-950 p-3 rounded-xl border border-slate-800/80 font-mono text-[11px] text-slate-300 space-y-1">
+                <div class="flex justify-between"><span>Student: Rahul Sharma (Class IX-A)</span><span class="text-emerald-400 font-bold">PAID</span></div>
+                <div class="flex justify-between text-slate-500"><span>Tuition + Computer Fee</span><span>₹2,400.00</span></div>
+              </div>
+            </div>
+
+            <!-- Snippet 2: WhatsApp Absence Automation -->
+            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="font-extrabold text-white text-xs flex items-center space-x-2">
+                  <span>💬</span>
+                  <span>Instant Meta WhatsApp Cloud Alerts</span>
+                </span>
+                <span class="text-[10px] bg-blue-950 text-blue-400 px-2 py-0.5 rounded-full border border-blue-800/40 font-bold">Real-Time Webhook</span>
+              </div>
+              <p class="text-slate-400 text-xs">When a teacher marks a student absent on their mobile dashboard, the server automatically dispatches an official WhatsApp notice to the parent within 2 seconds.</p>
+              <div class="bg-slate-950 p-3 rounded-xl border border-slate-800/80 font-mono text-[11px] text-emerald-400 space-y-1">
+                <div>💬 "Dear Parent, your ward Ananya was marked Absent today (Oct 14) for Class VII-B."</div>
+              </div>
+            </div>
+
+            <!-- Snippet 3: CBSE & State Board Exam Engine -->
+            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="font-extrabold text-white text-xs flex items-center space-x-2">
+                  <span>📝</span>
+                  <span>Exams, Grading & Digital Marksheets</span>
+                </span>
+                <span class="text-[10px] bg-purple-950 text-purple-400 px-2 py-0.5 rounded-full border border-purple-800/40 font-bold">Term 1 & Term 2 Ready</span>
+              </div>
+              <p class="text-slate-400 text-xs">Custom pass/fail boundaries, subject teachers entering scores, automatic ranking, GPA calculation, and instant admit card/id card generation with principal signature integration.</p>
+            </div>
+
+            <!-- Snippet 4: Dedicated School Subdomain -->
+            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="font-extrabold text-white text-xs flex items-center space-x-2">
+                  <span>🌐</span>
+                  <span>White-Labeled Public Website & Content</span>
+                </span>
+                <span class="text-[10px] bg-amber-950 text-amber-400 px-2 py-0.5 rounded-full border border-amber-800/40 font-bold">Editable via Admin Portal</span>
+              </div>
+              <p class="text-slate-400 text-xs">Every onboarded school gets their own responsive website with notices, gallery, online admission forms, contact details, and their own logo and favicon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 5. THREE CORE PORTALS                      -->
+  <!-- ========================================== -->
+  <section id="portals" class="py-16 sm:py-24 border-b border-slate-800 bg-slate-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center space-y-3 max-w-2xl mx-auto">
+        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Designed for Every Stakeholder</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight">Dedicated Portals for Admins, Teachers & Parents</h2>
+        <p class="text-xs sm:text-sm text-slate-400">Streamline collaboration with specialized interfaces optimized for laptops, tablets, and smartphones.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Portal 1: School Admin -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-4 hover:border-blue-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold text-2xl border border-blue-500/30">
+              💻
+            </div>
+            <h3 class="text-lg font-black text-white">School Admin Portal</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Complete command center for the Principal and management office:
+            </p>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold">✔</span>
+                <span>Student Directory & Admissions Approval</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold">✔</span>
+                <span>Session Fee Structures & Receipt Generation</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold">✔</span>
+                <span>Examination Scheduling & Marksheet Audits</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold">✔</span>
+                <span>Teacher Salary Ledger & Leave Approvals</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold">✔</span>
+                <span>Public Website Content & Notice Management</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-3 border-t border-slate-800">
+            <span class="text-[11px] font-mono text-blue-400">Routes: /admin · /admin/login</span>
+          </div>
+        </div>
+
+        <!-- Portal 2: Teacher Portal -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-4 hover:border-indigo-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center font-bold text-2xl border border-indigo-500/30">
+              👩‍🏫
+            </div>
+            <h3 class="text-lg font-black text-white">Faculty & Teacher Portal</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Fast, tap-friendly mobile dashboard designed for educators:
+            </p>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold">✔</span>
+                <span>One-Tap Class Attendance (Present, Absent, Late)</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold">✔</span>
+                <span>Subject Marks & Grade Entry</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold">✔</span>
+                <span>Assigned Sections & Student Roster Access</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold">✔</span>
+                <span>Leave Applications & Salary Slip History</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold">✔</span>
+                <span>Works on any mobile smartphone browser</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-3 border-t border-slate-800">
+            <span class="text-[11px] font-mono text-indigo-400">Routes: /teacher · /teacher-login</span>
+          </div>
+        </div>
+
+        <!-- Portal 3: Parent & Student -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-4 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center font-bold text-2xl border border-emerald-500/30">
+              📱
+            </div>
+            <h3 class="text-lg font-black text-white">Parent & Student Touchpoint</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Frictionless parent engagement through WhatsApp and school portal:
+            </p>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold">✔</span>
+                <span>Direct WhatsApp Attendance Notifications</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold">✔</span>
+                <span>Instant Digital Fee Receipts Delivered to Phone</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold">✔</span>
+                <span>Online Admission Application Submission</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold">✔</span>
+                <span>School Public Website Notices & Event Calendar</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-emerald-400 font-bold">✔</span>
+                <span>Zero app download required for parents</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-3 border-t border-slate-800">
+            <span class="text-[11px] font-mono text-emerald-400">Direct WhatsApp Integration</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 6. FULL FEATURES MATRIX                    -->
+  <!-- ========================================== -->
+  <section id="features" class="py-16 sm:py-24 border-b border-slate-800 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center space-y-3 max-w-2xl mx-auto">
+        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Enterprise Architecture</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight">Everything a School Needs Under One Roof</h2>
+        <p class="text-xs sm:text-sm text-slate-400">Built to handle complex Indian educational requirements, multi-session rollovers, and strict financial accounting.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="bg-slate-900/70 border border-slate-800 p-5 rounded-2xl space-y-2 hover:border-slate-700 transition-colors">
+          <div class="text-2xl">🎓</div>
+          <h4 class="font-bold text-white text-sm">Student Information System</h4>
+          <p class="text-xs text-slate-400">Complete admission directory, roll numbers, guardian contact numbers, blood group, category analytics, and archive records.</p>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 p-5 rounded-2xl space-y-2 hover:border-slate-700 transition-colors">
+          <div class="text-2xl">📅</div>
+          <h4 class="font-bold text-white text-sm">Academic Sessions</h4>
+          <p class="text-xs text-slate-400">Seamless session rollover (e.g. 2025-26 to 2026-27), preserving historical fee ledgers and examination results without corruption.</p>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 p-5 rounded-2xl space-y-2 hover:border-slate-700 transition-colors">
+          <div class="text-2xl">💳</div>
+          <h4 class="font-bold text-white text-sm">Flexible Fee Structures</h4>
+          <p class="text-xs text-slate-400">Monthly tuition, admission, exam, transport, and custom fees with automatic late fine computation, concession, and receipts.</p>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 p-5 rounded-2xl space-y-2 hover:border-slate-700 transition-colors">
+          <div class="text-2xl">⚡</div>
+          <h4 class="font-bold text-white text-sm">Automated Notifications</h4>
+          <p class="text-xs text-slate-400">Meta WhatsApp Cloud API integration and SMS gateway for instant absence alerts, fee reminders, and urgent circulars.</p>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 p-5 rounded-2xl space-y-2 hover:border-slate-700 transition-colors">
+          <div class="text-2xl">📊</div>
+          <h4 class="font-bold text-white text-sm">Exams & Marksheets</h4>
+          <p class="text-xs text-slate-400">Subject-wise marks entry, pass/fail grading rules, automated ranks, term aggregation, and printable report cards.</p>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 p-5 rounded-2xl space-y-2 hover:border-slate-700 transition-colors">
+          <div class="text-2xl">🪪</div>
+          <h4 class="font-bold text-white text-sm">ID & Admit Card Studio</h4>
+          <p class="text-xs text-slate-400">Automated batch generation of student ID cards with barcodes/QR and examination admit cards with digital principal signatures.</p>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 p-5 rounded-2xl space-y-2 hover:border-slate-700 transition-colors">
+          <div class="text-2xl">👥</div>
+          <h4 class="font-bold text-white text-sm">Faculty & Payroll</h4>
+          <p class="text-xs text-slate-400">Teacher employee directory, subject assignments, monthly salary slips, leave requests, and activity audit logs.</p>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 p-5 rounded-2xl space-y-2 hover:border-slate-700 transition-colors">
+          <div class="text-2xl">🌐</div>
+          <h4 class="font-bold text-white text-sm">School Website & Subdomain</h4>
+          <p class="text-xs text-slate-400">Every school gets their own white-labeled public website with custom logo, gallery, online admission form, and notices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 7. SUBSCRIPTION PLANS & PRICING            -->
+  <!-- ========================================== -->
+  <section id="pricing" class="py-16 sm:py-24 border-b border-slate-800 bg-slate-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center space-y-3 max-w-2xl mx-auto">
+        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Transparent Institutional Pricing</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight">Flexible Plans for Single & Multi-Branch Schools</h2>
+        <p class="text-xs sm:text-sm text-slate-400">Choose the ideal plan for your institution. All plans include isolated tenant databases, daily backups, and free software updates.</p>
+        
+        <!-- Billing Period Switch -->
+        <div class="inline-flex items-center bg-slate-950 p-1 rounded-xl border border-slate-800 text-xs font-bold mt-4">
+          <button id="billing-monthly-btn" class="px-4 py-1.5 rounded-lg bg-blue-600 text-white transition-all">Monthly</button>
+          <button id="billing-annual-btn" class="px-4 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all">
+            <span>Annual</span>
+            <span class="text-[10px] bg-emerald-950 text-emerald-400 px-1.5 py-0.5 rounded ml-1 font-extrabold">20% OFF</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div id="pricing-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Plan 1: Free Trial -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <span class="text-xs font-extrabold text-blue-400 uppercase tracking-wider block">Trial Tier</span>
+            <h3 class="text-xl font-black text-white">Free 30-Day Trial</h3>
+            <div class="flex items-baseline space-x-1">
+              <span class="text-3xl font-black text-white">₹0</span>
+              <span class="text-xs text-slate-500">/ 30 Days</span>
+            </div>
+            <p class="text-xs text-slate-400">Experience the complete ERP before making an institutional decision.</p>
+            <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Up to 100 Students</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Dedicated School Subdomain</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Daily Attendance & Student Directory</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Fee Collection & Digital Receipts</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Online School Website</span></li>
+            </ul>
+          </div>
+          <button onclick="selectPlan('Free 30-Day Trial')" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-3 rounded-xl border border-slate-700 transition-all">
+            Start Free Trial
+          </button>
+        </div>
+
+        <!-- Plan 2: Starter -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <span class="text-xs font-extrabold text-indigo-400 uppercase tracking-wider block">Starter</span>
+            <h3 class="text-xl font-black text-white">Starter Tier</h3>
+            <div class="flex items-baseline space-x-1">
+              <span class="text-3xl font-black text-white price-value" data-monthly="₹2,499" data-annual="₹1,999">₹2,499</span>
+              <span class="text-xs text-slate-500">/ month</span>
+            </div>
+            <p class="text-xs text-slate-400">Ideal for primary, secondary, and growing private schools.</p>
+            <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Up to 300 Students</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Dedicated Subdomain</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Automated SMS Receipts</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Examination Marks & Report Cards</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Daily Automated Cloud Backups</span></li>
+            </ul>
+          </div>
+          <button onclick="selectPlan('Starter Tier')" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-3 rounded-xl border border-slate-700 transition-all">
+            Choose Starter
+          </button>
+        </div>
+
+        <!-- Plan 3: Professional (Most Popular) -->
+        <div class="bg-slate-900 border-2 border-blue-500 rounded-3xl p-6 space-y-6 flex flex-col justify-between relative shadow-xl shadow-blue-500/10">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] uppercase font-black px-3 py-0.5 rounded-full shadow">
+            MOST POPULAR CHOICE
+          </div>
+          <div class="space-y-4">
+            <span class="text-xs font-extrabold text-blue-400 uppercase tracking-wider block">Professional</span>
+            <h3 class="text-xl font-black text-white">Professional Tier</h3>
+            <div class="flex items-baseline space-x-1">
+              <span class="text-3xl font-black text-white price-value" data-monthly="₹5,999" data-annual="₹4,799">₹5,999</span>
+              <span class="text-xs text-slate-500">/ month</span>
+            </div>
+            <p class="text-xs text-slate-400">Full institutional capability with automated parent notifications.</p>
+            <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Up to 1,000 Students</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Meta WhatsApp Cloud API Automation</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>ID Card & Admit Card Generator</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Teacher Mobile Dashboard</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Online Public Admission Portal</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Priority WhatsApp Helpline Support</span></li>
+            </ul>
+          </div>
+          <button onclick="selectPlan('Professional Tier')" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs py-3 rounded-xl shadow-lg shadow-blue-600/25 transition-all">
+            Get Professional
+          </button>
+        </div>
+
+        <!-- Plan 4: Enterprise -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <span class="text-xs font-extrabold text-purple-400 uppercase tracking-wider block">Enterprise</span>
+            <h3 class="text-xl font-black text-white">Enterprise Tier</h3>
+            <div class="flex items-baseline space-x-1">
+              <span class="text-3xl font-black text-white price-value" data-monthly="₹12,999" data-annual="₹10,399">₹12,999</span>
+              <span class="text-xs text-slate-500">/ month</span>
+            </div>
+            <p class="text-xs text-slate-400">For large academic chains, trusts, and multi-campus institutions.</p>
+            <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Unlimited Students & Faculty</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Custom Domain CNAME (e.g. portal.school.edu)</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Multi-Branch Sharding & Aggregated Reports</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Dedicated Cloud Database Infrastructure</span></li>
+              <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>24/7 Dedicated Account Manager</span></li>
+            </ul>
+          </div>
+          <button onclick="selectPlan('Enterprise Tier')" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-3 rounded-xl border border-slate-700 transition-all">
+            Contact for Enterprise
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 8. FREE DEMO REQUEST & ENQUIRY FORM        -->
+  <!-- ========================================== -->
+  <section id="demo" class="py-16 sm:py-24 border-b border-slate-800 bg-slate-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="text-center space-y-3">
+        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Get Started in 24 Hours</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight">Request a Personalized School Demo</h2>
+        <p class="text-xs sm:text-sm text-slate-400">Our school onboarding engineer will set up a live trial instance for your institution with your school's own name, logo, and subdomain.</p>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl">
+        <form id="demo-request-form" class="space-y-4 text-xs">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="space-y-1">
+              <label class="text-slate-300 font-bold">School Name <span class="text-red-400">*</span></label>
+              <input type="text" id="demo-school-name" required placeholder="e.g. Modern Model High School" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div class="space-y-1">
+              <label class="text-slate-300 font-bold">Contact Person / Principal Name <span class="text-red-400">*</span></label>
+              <input type="text" id="demo-contact-name" required placeholder="e.g. Dr. Rajesh Sharma" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="space-y-1">
+              <label class="text-slate-300 font-bold">Official Email Address <span class="text-red-400">*</span></label>
+              <input type="email" id="demo-email" required placeholder="principal@yourschool.edu.in" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div class="space-y-1">
+              <label class="text-slate-300 font-bold">Mobile / WhatsApp Number <span class="text-red-400">*</span></label>
+              <input type="tel" id="demo-phone" required placeholder="+91 9876543210" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="space-y-1">
+              <label class="text-slate-300 font-bold">City / Town</label>
+              <input type="text" id="demo-city" placeholder="e.g. Guwahati" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div class="space-y-1">
+              <label class="text-slate-300 font-bold">State</label>
+              <input type="text" id="demo-state" value="Assam" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div class="space-y-1">
+              <label class="text-slate-300 font-bold">Current Student Strength</label>
+              <select id="demo-students" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500">
+                <option value="100 - 300">100 – 300 Students</option>
+                <option value="300 - 600">300 – 600 Students</option>
+                <option value="600 - 1200">600 – 1,200 Students</option>
+                <option value="1200+">1,200+ Students</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="space-y-1">
+              <label class="text-slate-300 font-bold">Interested Plan</label>
+              <select id="demo-plan" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500">
+                <option value="Free 30-Day Trial">Free 30-Day Trial</option>
+                <option value="Starter Tier">Starter Tier</option>
+                <option value="Professional Tier">Professional Tier</option>
+                <option value="Enterprise Tier">Enterprise Tier</option>
+              </select>
+            </div>
+
+            <div class="space-y-1">
+              <label class="text-slate-300 font-bold">Desired Subdomain (Slug)</label>
+              <div class="flex items-center">
+                <input type="text" id="demo-subdomain" placeholder="e.g. nmps" pattern="[a-z0-9-]+" class="w-full bg-slate-950 border border-slate-800 rounded-l-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500 font-mono lowercase">
+                <span class="bg-slate-900 border border-l-0 border-slate-800 px-3 py-2.5 text-slate-400 font-mono rounded-r-xl">.schoolerp.in</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-1">
+            <label class="text-slate-300 font-bold">Specific Requirements or Message (Optional)</label>
+            <textarea id="demo-message" rows="2" placeholder="Tell us if you have specific board requirements, transport routes, or custom fee types..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-blue-500"></textarea>
+          </div>
+
+          <div id="demo-error" class="hidden text-red-400 bg-red-950/40 p-3 rounded-xl border border-red-800/40 font-semibold text-xs"></div>
+          <div id="demo-success" class="hidden text-emerald-400 bg-emerald-950/40 p-4 rounded-xl border border-emerald-800/40 font-bold text-xs space-y-1">
+            <p>🎉 Demo Request Submitted Successfully!</p>
+            <p class="text-slate-300 font-normal">Our technical onboarding specialist will contact you via WhatsApp / Phone within 24 hours to instantiate your school instance.</p>
+          </div>
+
+          <button type="submit" id="submit-demo-btn" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-sm py-3.5 rounded-xl shadow-lg shadow-blue-600/25 transition-all">
+            Schedule Live Institutional Demo &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 9. FOOTER                                  -->
+  <!-- ========================================== -->
+  <footer class="bg-slate-950 border-t border-slate-800/80 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="space-y-3">
+          <div class="flex items-center space-x-2">
+            <span class="text-xl">⚡</span>
+            <span class="text-white font-black text-base">EduPulse Cloud SaaS</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Enterprise School Management System and Subdomain Hosting Platform. Delivering security, high reliability, and data sovereignty for Indian educational institutions.
+          </p>
+          <div class="flex items-center space-x-3 text-sm text-slate-400">
+            <a href="https://wa.me/918099456097" target="_blank" class="hover:text-emerald-400">WhatsApp Chat</a>
+            <span>·</span>
+            <a href="mailto:sales@schoolerp.in" class="hover:text-blue-400">sales@schoolerp.in</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-3">Product</h4>
+          <ul class="space-y-2">
+            <li><a href="#features" class="hover:text-white">Features & Modules</a></li>
+            <li><a href="#portals" class="hover:text-white">Admin & Teacher Portals</a></li>
+            <li><a href="#pricing" class="hover:text-white">Subscription Plans</a></li>
+            <li><a href="/login" class="hover:text-white">Find School Subdomain</a></li>
+            <li><a href="/superadmin" class="hover:text-white">Super Admin Console</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-3">Company</h4>
+          <ul class="space-y-2">
+            <li><a href="/about" class="hover:text-white">About EduPulse</a></li>
+            <li><a href="/contact" class="hover:text-white">Contact & Support</a></li>
+            <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="/terms" class="hover:text-white">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-3">Helpline & Sales</h4>
+          <p class="text-slate-300 font-semibold mb-1">Phone: +91 8099456097</p>
+          <p class="text-slate-400">Email: support@schoolerp.in</p>
+          <p class="text-slate-400 mt-2">Tech Hub Guwahati, GS Road, Assam – 781005</p>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 gap-2">
+        <p>&copy; 2026 EduPulse Cloud ERP SaaS Platform. All rights reserved.</p>
+        <p>Enterprise Multi-Tenant School Software with 100% Data Isolation.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/918099456097?text=Hello%20EduPulse%20Team,%20I%20would%20like%20to%20request%20a%20demo%20for%20my%20school." target="_blank" class="fixed bottom-6 right-6 z-40 bg-emerald-600 hover:bg-emerald-500 text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-all border border-emerald-400/30" aria-label="Chat on WhatsApp">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.044c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.579 4.183 1.588 5.929l-1.688 6.301 6.467-1.696c1.674.935 3.605 1.466 5.633 1.466 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile navigation toggle
+    const mobBtn = document.getElementById('mobile-menu-btn');
+    const mobMenu = document.getElementById('mobile-menu');
+    mobBtn.addEventListener('click', () => {
+      mobMenu.classList.toggle('hidden');
+    });
+
+    // Pricing Billing Period Toggle
+    const mBtn = document.getElementById('billing-monthly-btn');
+    const aBtn = document.getElementById('billing-annual-btn');
+    const prices = document.querySelectorAll('.price-value');
+
+    mBtn.addEventListener('click', () => {
+      mBtn.className = 'px-4 py-1.5 rounded-lg bg-blue-600 text-white transition-all';
+      aBtn.className = 'px-4 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all';
+      prices.forEach(el => el.innerText = el.dataset.monthly);
+    });
+
+    aBtn.addEventListener('click', () => {
+      aBtn.className = 'px-4 py-1.5 rounded-lg bg-blue-600 text-white transition-all';
+      mBtn.className = 'px-4 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all';
+      prices.forEach(el => el.innerText = el.dataset.annual);
+    });
+
+    function selectPlan(planName) {
+      const planSelect = document.getElementById('demo-plan');
+      if (planSelect) {
+        planSelect.value = planName;
+      }
+      const demoSection = document.getElementById('demo');
+      if (demoSection) {
+        demoSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Demo Request Form Submission
+    const demoForm = document.getElementById('demo-request-form');
+    demoForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const errBox = document.getElementById('demo-error');
+      const succBox = document.getElementById('demo-success');
+      const submitBtn = document.getElementById('submit-demo-btn');
+      errBox.classList.add('hidden');
+      succBox.classList.add('hidden');
+
+      const payload = {
+        schoolName: document.getElementById('demo-school-name').value.trim(),
+        contactName: document.getElementById('demo-contact-name').value.trim(),
+        email: document.getElementById('demo-email').value.trim(),
+        phone: document.getElementById('demo-phone').value.trim(),
+        city: document.getElementById('demo-city').value.trim(),
+        state: document.getElementById('demo-state').value.trim(),
+        studentStrength: document.getElementById('demo-students').value,
+        plan: document.getElementById('demo-plan').value,
+        subdomain: document.getElementById('demo-subdomain').value.trim().toLowerCase(),
+        message: document.getElementById('demo-message').value.trim()
+      };
+
+      try {
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Submitting Request...';
+
+        const res = await fetch('/api/saas/demo-request', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Failed to submit demo request.');
+
+        succBox.classList.remove('hidden');
+        demoForm.reset();
+      } catch (err) {
+        errBox.innerText = err.message;
+        errBox.classList.remove('hidden');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Schedule Live Institutional Demo →';
+      }
+    });
+
+    // Optionally fetch dynamic SaaS config if configured
+    fetch('/api/saas/config')
+      .then(r => r.ok ? r.json() : null)
+      .then(config => {
+        if (!config) return;
+        // Apply dynamic pricing if customized by super admin
+      })
+      .catch(() => {});
+  </script>
+</body>
+</html>

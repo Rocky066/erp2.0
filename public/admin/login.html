@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - GJV Management System</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="icon" href="/logo.jpg" type="image/jpeg">
+  <script src="/js/icon-runtime.js" defer></script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 flex min-h-screen items-center justify-center p-4 transition-colors duration-300">
+
+  <!-- Preloader Screen -->
+  <div id="loading-screen" class="fixed inset-0 z-50 bg-slate-900 flex items-center justify-center transition-opacity duration-500">
+    <div class="text-center space-y-4">
+      <img src="/logo.jpg" class="w-20 h-20 object-contain rounded-full animate-pulse mx-auto shadow-2xl border-2 border-amber-500/20">
+      <div class="w-8 h-8 border-4 border-amber-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
+      <p class="text-slate-400 text-xs font-semibold tracking-wider uppercase">Loading GJV Portal</p>
+    </div>
+  </div>
+
+  <!-- Background decorations -->
+  <div class="fixed -top-40 -left-40 w-96 h-96 rounded-full bg-amber-500/10 blur-3xl"></div>
+  <div class="fixed -bottom-40 -right-40 w-96 h-96 rounded-full bg-amber-500/10 blur-3xl"></div>
+
+  <div class="glass border border-slate-200/60 dark:border-slate-800/60 p-8 sm:p-10 rounded-3xl w-full max-w-md shadow-2xl relative z-10 space-y-8">
+    <div class="text-center space-y-2">
+      <img id="admin-login-logo" src="/logo.jpg" alt="Logo" class="w-16 h-16 object-contain rounded-full mx-auto shadow-lg border border-amber-500/10">
+      <h2 class="text-2xl font-black tracking-tight text-slate-900 dark:text-white">Admin Portal</h2>
+      <p id="admin-login-school-name" class="text-xs text-slate-500 dark:text-slate-400 font-medium">Garumara Jatiya Vidyalaya Management System</p>
+    </div>
+
+    <!-- Error message alert -->
+    <div id="error-alert" class="hidden bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 p-4 rounded-xl text-xs font-semibold border border-red-200/30"></div>
+
+    <form id="admin-login-form" class="space-y-4 text-xs font-medium">
+      <div class="space-y-1">
+        <label class="text-slate-600 dark:text-slate-300">Email Address</label>
+        <input type="email" id="username" required placeholder="admin@garumarajatiyavidyalaya.in" class="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-amber-500 transition-colors">
+      </div>
+      <div class="space-y-1 relative">
+        <label class="text-slate-600 dark:text-slate-300">Password</label>
+        <input type="password" id="password" required placeholder="••••••••" class="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3.5 pr-10 text-slate-900 dark:text-white focus:outline-none focus:border-amber-500 transition-colors">
+        <button type="button" id="toggle-password" class="absolute right-3.5 top-8.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 focus:outline-none">
+          👁️
+        </button>
+      </div>
+      <button type="submit" class="bg-amber-500 hover:bg-amber-400 text-slate-900 w-full py-4 rounded-xl font-bold text-sm tracking-wide transition-colors shadow-lg shadow-amber-500/10 mt-2">
+        Secure Log In
+      </button>
+    </form>
+
+    <div class="text-center pt-2 space-y-2">
+      <a href="/teacher-login" class="text-amber-500 hover:text-amber-400 text-xs font-bold block">👩‍🏫 Faculty Member? Sign in to Teacher Portal &rarr;</a>
+      <a href="../index.html" class="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 text-xs font-semibold block">&larr; Back to Public Website</a>
+    </div>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script>
+    // Redirect if already authenticated
+    if (ApiService.isAuthenticated()) {
+      window.location.href = 'index.html';
+    }
+
+    const form = document.getElementById('admin-login-form');
+    const errAlert = document.getElementById('error-alert');
+    const pwdInput = document.getElementById('password');
+    const pwdBtn = document.getElementById('toggle-password');
+
+    // Password visibility toggle
+    pwdBtn.addEventListener('click', () => {
+      if (pwdInput.type === 'password') {
+        pwdInput.type = 'text';
+        pwdBtn.innerText = '🔒';
+      } else {
+        pwdInput.type = 'password';
+        pwdBtn.innerText = '👁️';
+      }
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errAlert.classList.add('hidden');
+      
+      const username = document.getElementById('username').value.trim();
+      const password = pwdInput.value;
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = `<div class="inline-block w-4 h-4 border-2 border-slate-900 border-t-transparent rounded-full animate-spin mr-2"></div> Logging in...`;
+      btn.disabled = true;
+
+      let timedOut = false;
+      const timeoutId = setTimeout(() => {
+        timedOut = true;
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+        errAlert.innerText = 'Connection timed out after 15 seconds. Please verify the backend server is running on localhost:3000.';
+        errAlert.classList.remove('hidden');
+      }, 15000);
+
+      try {
+        await ApiService.login(username, password);
+        clearTimeout(timeoutId);
+        if (!timedOut) {
+          window.location.href = 'index.html';
+        }
+      } catch (err) {
+        clearTimeout(timeoutId);
+        if (!timedOut) {
+          const errMsg = (err.message && (err.message.includes('Failed to fetch') || err.message.includes('connect')))
+            ? 'Unable to connect to backend server. Please verify network connection and server status.'
+            : (err.message || 'Login failed. Please check your credentials.');
+          errAlert.innerText = errMsg;
+          errAlert.classList.remove('hidden');
+        }
+      } finally {
+        if (!timedOut && !ApiService.isAuthenticated()) {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }
+      }
+    });
+  </script>
+
+  <script>
+    // Dynamically apply tenant branding if on school subdomain
+    fetch('/api/website-info')
+      .then(res => res.ok ? res.json() : null)
+      .then(info => {
+        if (!info) return;
+        if (info.schoolName) {
+          const nameEl = document.getElementById('admin-login-school-name');
+          if (nameEl) nameEl.textContent = `${info.schoolName} Management System`;
+          document.title = `Admin Login - ${info.schoolName}`;
+        }
+        if (info.websiteLogo || info.logo) {
+          const logoEl = document.getElementById('admin-login-logo');
+          if (logoEl) logoEl.src = info.websiteLogo || info.logo;
+          const loaderImg = document.querySelector('#loading-screen img');
+          if (loaderImg) loaderImg.src = info.websiteLogo || info.logo;
+        }
+        if (info.favicon) {
+          let fav = document.querySelector("link[rel*='icon']");
+          if (fav) fav.href = info.favicon;
+        }
+      })
+      .catch(() => {});
+
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loading-screen');
+      if (loader) {
+        loader.classList.add('opacity-0');
+        setTimeout(() => loader.remove(), 500);
+      }
+    });
+  </script>
+</body>
+</html>

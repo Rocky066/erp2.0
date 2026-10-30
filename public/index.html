@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garumara Jatiya Vidyalaya - School Management System</title>
+  <meta name="description" content="Welcome to the official website of Garumara Jatiya Vidyalaya. Holistic, high-quality, and character-building education for grades LKG to Class X.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="icon" href="/logo.jpg" type="image/jpeg">
+  <script src="/js/icon-runtime.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- Preloader Screen -->
+  <div id="loading-screen" class="fixed inset-0 z-50 bg-slate-900 flex items-center justify-center transition-opacity duration-500">
+    <div class="text-center space-y-4">
+      <img src="/logo.jpg" class="w-20 h-20 object-contain rounded-full animate-pulse mx-auto shadow-2xl border-2 border-amber-500/20">
+      <div class="w-8 h-8 border-4 border-amber-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
+      <p class="text-slate-400 text-xs font-semibold tracking-wider uppercase">Loading GJV Portal</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="shared-header" class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-transparent"></header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+    <!-- Image Background -->
+    <div class="absolute inset-0 z-0">
+      <img src="uploads/hero_bg.jpg" alt="School Banner" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-slate-950/45"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/40 to-slate-950"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10 text-center space-y-8 max-w-4xl">
+      <div class="inline-flex items-center space-x-2 bg-amber-500/10 text-amber-500 border border-amber-500/25 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-md">
+        <span id="public-current-session">Admissions Open</span>
+      </div>
+      
+      <h1 class="text-4xl sm:text-6xl font-black text-white leading-tight tracking-tight drop-shadow-md">
+        Welcome to <br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200" id="hero-school-title">Garumara Jatiya Vidyalaya</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl text-slate-200 dark:text-slate-300 leading-relaxed font-medium drop-shadow-sm max-w-2xl mx-auto" id="hero-school-tagline">
+        Building Character, Cultivating Excellence
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <a href="admission.html" class="bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-3.5 rounded-2xl font-bold text-base shadow-lg hover:shadow-amber-500/25 transition-all w-full sm:w-auto text-center">
+          Apply Now
+        </a>
+        <a href="about.html" class="glass border border-white/20 text-white px-8 py-3.5 rounded-2xl font-bold text-base hover:bg-white/10 transition-all w-full sm:w-auto text-center">
+          Learn More
+        </a>
+      </div>
+    </div>
+
+    <!-- Notice Ticker Bar -->
+    <div class="absolute bottom-0 left-0 w-full glass border-t border-slate-200/20 dark:border-slate-800/20 py-3 z-20">
+      <div class="container mx-auto px-6 flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
+        <div class="shrink-0 bg-red-500 text-white font-extrabold text-[10px] sm:text-xs uppercase px-2.5 py-1 rounded-lg tracking-wider flex items-center justify-center space-x-1 w-fit shadow-md">
+          <span class="w-1.5 h-1.5 bg-white rounded-full animate-ping mr-1"></span>
+          <span>Latest Notices</span>
+        </div>
+        <div class="flex-1 overflow-hidden" id="notices-ticker">
+          <span class="text-sm text-slate-400 font-medium">Loading notice board announcements...</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Pillars -->
+  <section class="py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
+    <div class="container mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Our Core Pillars</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-base">We strive to create an educational atmosphere that blends classical character building with contemporary knowledge.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Pillar 1 -->
+        <div class="glass border border-slate-200/60 dark:border-slate-800/60 p-8 rounded-3xl space-y-4 hover:shadow-md transition-shadow">
+          <div class="bg-amber-100 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-bold">📚</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Academic Excellence</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Our curriculum balances fundamental reading, mathematics, and environmental sciences with deep research skills, giving students a head start.</p>
+        </div>
+        <!-- Pillar 2 -->
+        <div class="glass border border-slate-200/60 dark:border-slate-800/60 p-8 rounded-3xl space-y-4 hover:shadow-md transition-shadow">
+          <div class="bg-amber-100 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-bold">🤝</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Character Development</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">We instil discipline, compassion, and critical citizenship values, preparing children to become responsible, empathetic leaders.</p>
+        </div>
+        <!-- Pillar 3 -->
+        <div class="glass border border-slate-200/60 dark:border-slate-800/60 p-8 rounded-3xl space-y-4 hover:shadow-md transition-shadow">
+          <div class="bg-amber-100 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-bold">🎨</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Holistic Programs</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">From sports meets and scientific projects to music and arts, students can discover and sharpen their natural gifts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Message & Preview Info -->
+  <section class="py-24 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Message -->
+        <div class="space-y-6">
+          <span class="bg-amber-500/10 text-amber-500 border border-amber-500/25 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">Leadership Message</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Principal's Address</h2>
+          <p id="home-principal-message" class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed italic">
+            "Welcome to Garumara Jatiya Vidyalaya. As Principal, it is a privilege to lead this institution dedicated to academic achievement and character building. We believe that education is not merely acquiring knowledge, but molding young characters to face global challenges while remaining rooted in our ethical values..."
+          </p>
+          <div class="pt-4">
+            <h4 id="home-principal-name" class="font-bold text-slate-900 dark:text-white text-base">Dr. Anirban Sen, Ph.D.</h4>
+            <span id="home-principal-designation" class="text-xs text-slate-400 font-semibold block">Principal, GGV</span>
+          </div>
+          <a href="message.html" class="inline-flex items-center space-x-2 text-amber-500 hover:text-amber-400 font-bold text-sm pt-2">
+            <span>Read Full Message</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Recent Notices Sidebar on Home -->
+        <div class="glass border border-slate-200/60 dark:border-slate-800/60 p-8 rounded-3xl space-y-6 shadow-sm">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Recent Notices</h3>
+          <div class="space-y-4" id="home-notices-list">
+            <!-- Notices render here -->
+            <div class="animate-pulse flex space-x-4">
+              <div class="flex-1 space-y-4 py-1">
+                <div class="h-4 bg-slate-200 dark:bg-slate-800 rounded w-3/4"></div>
+                <div class="space-y-2">
+                  <div class="h-3 bg-slate-200 dark:bg-slate-800 rounded"></div>
+                  <div class="h-3 bg-slate-200 dark:bg-slate-800 rounded w-5/6"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="notices.html" class="block text-center bg-slate-900 dark:bg-slate-800 hover:bg-amber-500 dark:hover:bg-amber-400 hover:text-slate-900 text-white font-bold text-sm py-3 rounded-2xl transition-colors">
+            View Notice Board
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Panel -->
+  <section class="py-16 bg-amber-500 text-slate-900 transition-colors duration-300">
+    <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <span class="block text-4xl sm:text-5xl font-black mb-1">500+</span>
+        <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-800">Students Enrolled</span>
+      </div>
+      <div>
+        <span class="block text-4xl sm:text-5xl font-black mb-1">30+</span>
+        <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-800">Expert Educators</span>
+      </div>
+      <div>
+        <span class="block text-4xl sm:text-5xl font-black mb-1">15+</span>
+        <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-800">Active Classes</span>
+      </div>
+      <div>
+        <span class="block text-4xl sm:text-5xl font-black mb-1">98%</span>
+        <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-800">Success Rate</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="shared-footer" class="bg-slate-950 text-slate-300 transition-colors duration-300 border-t border-slate-900"></footer>
+
+  <!-- Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loading-screen');
+      if (loader) {
+        loader.classList.add('opacity-0');
+        setTimeout(() => loader.remove(), 500);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Teacher Portal Login - Garumara Jatiya Vidyalaya</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              500: '#f59e0b',
+              600: '#d97706',
+              900: '#78350f',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .glass {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    @media (max-width: 640px) {
+      input[type="text"], input[type="password"], select {
+        font-size: 16px !important;
+      }
+    }
+  </style>
+  <script src="/js/icon-runtime.js" defer></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-full flex flex-col justify-between selection:bg-amber-500 selection:text-slate-950 relative overflow-x-hidden">
+
+  <!-- Background Decorative Glows -->
+  <div class="fixed top-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="fixed bottom-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <!-- Header -->
+  <header class="w-full border-b border-slate-800/80 glass sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center space-x-2.5 sm:space-x-3 group">
+        <img id="tch-nav-logo" src="/logo.jpg" alt="Logo" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl object-cover border border-amber-500/30 group-hover:scale-105 transition-transform shrink-0">
+        <div>
+          <h1 id="tch-nav-school-name" class="text-xs sm:text-sm font-extrabold tracking-tight text-white uppercase truncate max-w-[170px] xs:max-w-[220px] sm:max-w-none">GARUMARA JATIYA VIDYALAYA</h1>
+          <p class="text-[9px] sm:text-[10px] text-amber-400 font-bold uppercase tracking-widest">Faculty Portal</p>
+        </div>
+      </a>
+      <div class="flex items-center space-x-2 sm:space-x-3 text-xs font-semibold">
+        <a href="/" class="text-slate-400 hover:text-white transition-colors px-2.5 py-1.5 rounded-lg hover:bg-slate-800/60 hidden xs:inline-block">
+          🏫 Website
+        </a>
+        <a href="/admin/login.html" class="text-slate-400 hover:text-amber-400 transition-colors px-2.5 py-1.5 rounded-lg hover:bg-slate-800/60 text-xs">
+          🔑 Admin
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-grow flex items-center justify-center p-3 sm:p-6 my-4 sm:my-8">
+    <div class="w-full max-w-sm sm:max-w-md">
+      
+      <!-- Login Card -->
+      <div class="glass border border-slate-800/80 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-2xl space-y-5 sm:space-y-6 relative overflow-hidden">
+        
+        <div class="text-center space-y-2">
+          <div class="w-14 h-14 sm:w-16 sm:h-16 bg-amber-500/10 border border-amber-500/20 text-amber-500 rounded-2xl flex items-center justify-center mx-auto text-2xl sm:text-3xl shadow-inner">
+            👩‍🏫
+          </div>
+          <h2 class="text-xl sm:text-2xl font-black tracking-tight text-white">Teacher Portal Login</h2>
+          <p class="text-xs text-slate-400">Access class rosters, student attendance, marks entry, and salary slips.</p>
+        </div>
+
+        <!-- Alert Error Box -->
+        <div id="tch-login-error" class="hidden p-4 rounded-2xl bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-semibold space-y-1">
+          <div class="flex items-center space-x-2">
+            <span>⚠️</span>
+            <span id="tch-error-text">Invalid username or password.</span>
+          </div>
+        </div>
+
+        <!-- Login Form -->
+        <form id="tch-login-form" class="space-y-4 text-xs font-semibold">
+          
+          <div class="space-y-1.5">
+            <label class="block text-slate-300 font-bold">Teacher ID / Username</label>
+            <div class="relative">
+              <input type="text" id="tch-username" required placeholder="e.g. TCH-2026-0001 or pooja.b" class="w-full bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors pl-10 min-h-[44px]">
+              <span class="absolute left-3.5 top-3.5 text-slate-500">👤</span>
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <div class="flex justify-between items-center">
+              <label class="block text-slate-300 font-bold">Password</label>
+              <button type="button" id="tch-forgot-btn" class="text-[11px] text-amber-400 hover:underline">Forgot Password?</button>
+            </div>
+            <div class="relative">
+              <input type="password" id="tch-password" required placeholder="Enter password" class="w-full bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors pl-10 pr-10 min-h-[44px]">
+              <span class="absolute left-3.5 top-3.5 text-slate-500">🔑</span>
+              <button type="button" id="tch-toggle-pwd" class="absolute right-3.5 top-3.5 text-slate-500 hover:text-white transition-colors" title="Toggle password visibility">
+                👁️
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-1">
+            <label class="flex items-center space-x-2 text-slate-400 cursor-pointer">
+              <input type="checkbox" id="tch-remember" class="w-4 h-4 rounded border-slate-800 text-amber-500 focus:ring-amber-500 bg-slate-900">
+              <span class="text-xs">Remember Me</span>
+            </label>
+          </div>
+
+          <button type="submit" id="tch-login-btn" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3.5 rounded-xl transition-all shadow-lg shadow-amber-500/20 flex items-center justify-center space-x-2 min-h-[44px]">
+            <span>Sign In to Teacher Dashboard</span>
+            <span id="tch-login-spinner" class="hidden">⏳</span>
+          </button>
+        </form>
+
+        <div class="pt-4 border-t border-slate-800/80 text-center">
+          <p class="text-[11px] text-slate-400">
+            Need a login account? Contact School Admin at <a href="mailto:admin@garumarajatiyavidyalaya.in" class="text-amber-400 hover:underline">admin@garumarajatiyavidyalaya.in</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Forgot Password Modal -->
+  <div id="tch-forgot-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-3 sm:p-4">
+    <div class="glass border border-slate-800 rounded-2xl sm:rounded-3xl max-w-sm sm:max-w-md w-full p-5 sm:p-6 space-y-4 shadow-2xl relative">
+      <button id="tch-forgot-close" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl font-bold">&times;</button>
+      
+      <div class="flex items-center space-x-3 border-b border-slate-800 pb-3">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center font-bold text-lg shrink-0">🔑</div>
+        <div>
+          <h3 class="text-sm sm:text-base font-extrabold text-white">Reset Teacher Password</h3>
+          <p class="text-xs text-slate-400">Enter your Teacher ID or Username to request a reset link</p>
+        </div>
+      </div>
+
+      <form id="tch-forgot-form" class="space-y-4 text-xs font-semibold">
+        <div class="space-y-1">
+          <label class="text-slate-300">Teacher ID / Username</label>
+          <input type="text" id="tch-forgot-username" required placeholder="e.g. TCH-2026-0001" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500 min-h-[44px]">
+        </div>
+        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 py-3 rounded-xl font-extrabold shadow-md min-h-[44px]">
+          Request Password Reset
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w-full border-t border-slate-900 py-4 text-center text-xs text-slate-500">
+    <p>&copy; 2026 Garumara Jatiya Vidyalaya. All rights reserved.</p>
+  </footer>
+
+  <script src="/js/teacher-login.js"></script>
+</body>
+</html>

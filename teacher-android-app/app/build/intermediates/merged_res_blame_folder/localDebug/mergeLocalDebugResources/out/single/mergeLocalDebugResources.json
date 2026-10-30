@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "in.garumarajv.teacher.app-localDebug-41:/layout_activity_main.xml.flat",
+        "source": "in.garumarajv.teacher.app-main-45:/layout/activity_main.xml"
+    },
+    {
+        "merged": "in.garumarajv.teacher.app-localDebug-41:/xml_network_security_config.xml.flat",
+        "source": "in.garumarajv.teacher.app-main-45:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "in.garumarajv.teacher.app-localDebug-41:/xml_file_paths.xml.flat",
+        "source": "in.garumarajv.teacher.app-main-45:/xml/file_paths.xml"
+    },
+    {
+        "merged": "in.garumarajv.teacher.app-localDebug-41:/drawable_ic_launcher.xml.flat",
+        "source": "in.garumarajv.teacher.app-main-45:/drawable/ic_launcher.xml"
+    }
+]

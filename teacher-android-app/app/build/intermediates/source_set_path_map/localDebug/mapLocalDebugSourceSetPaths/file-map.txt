@@ -1,0 +1,46 @@
+in.garumarajv.teacher.app-lifecycle-runtime-2.6.2-0 C:\Users\pc\.gradle\caches\9.3.0\transforms\0001f39e6801d3887b51d702cbfd71e5\workspace\transformed\lifecycle-runtime-2.6.2\res
+in.garumarajv.teacher.app-startup-runtime-1.1.1-1 C:\Users\pc\.gradle\caches\9.3.0\transforms\03b8e6e697552dd451bfb17cfecf3d6c\workspace\transformed\startup-runtime-1.1.1\res
+in.garumarajv.teacher.app-core-runtime-2.2.0-2 C:\Users\pc\.gradle\caches\9.3.0\transforms\072b3c255af1154c1ec8dcd2120d6e06\workspace\transformed\core-runtime-2.2.0\res
+in.garumarajv.teacher.app-drawerlayout-1.1.1-3 C:\Users\pc\.gradle\caches\9.3.0\transforms\0b433bbd9662142745cb3fd59b6658ce\workspace\transformed\drawerlayout-1.1.1\res
+in.garumarajv.teacher.app-annotation-experimental-1.4.1-4 C:\Users\pc\.gradle\caches\9.3.0\transforms\15b5e484448c8bba4e5e23c881b2c71e\workspace\transformed\annotation-experimental-1.4.1\res
+in.garumarajv.teacher.app-appcompat-1.7.0-5 C:\Users\pc\.gradle\caches\9.3.0\transforms\16a89a09422c3f3d35a90831167ec212\workspace\transformed\appcompat-1.7.0\res
+in.garumarajv.teacher.app-transition-1.5.0-6 C:\Users\pc\.gradle\caches\9.3.0\transforms\20ce4e76c3d3ee21a4b2fe3f365afda1\workspace\transformed\transition-1.5.0\res
+in.garumarajv.teacher.app-lifecycle-viewmodel-2.6.2-7 C:\Users\pc\.gradle\caches\9.3.0\transforms\31716092619d2871c20ce3ae7ce936e1\workspace\transformed\lifecycle-viewmodel-2.6.2\res
+in.garumarajv.teacher.app-webkit-1.12.1-8 C:\Users\pc\.gradle\caches\9.3.0\transforms\33400e904712686bf7b249946301e85b\workspace\transformed\webkit-1.12.1\res
+in.garumarajv.teacher.app-tracing-ktx-1.2.0-9 C:\Users\pc\.gradle\caches\9.3.0\transforms\35c309446906d53b407e25a7bfbb52c6\workspace\transformed\tracing-ktx-1.2.0\res
+in.garumarajv.teacher.app-appcompat-resources-1.7.0-10 C:\Users\pc\.gradle\caches\9.3.0\transforms\3cb8292b1ec39e7ab384408f29c09a2b\workspace\transformed\appcompat-resources-1.7.0\res
+in.garumarajv.teacher.app-room-ktx-2.6.1-11 C:\Users\pc\.gradle\caches\9.3.0\transforms\3e28da88458d6febbf7b385076e1bbf7\workspace\transformed\room-ktx-2.6.1\res
+in.garumarajv.teacher.app-coordinatorlayout-1.1.0-12 C:\Users\pc\.gradle\caches\9.3.0\transforms\4916eb4e14b9a62135f742bfffeb8b5f\workspace\transformed\coordinatorlayout-1.1.0\res
+in.garumarajv.teacher.app-room-runtime-2.6.1-13 C:\Users\pc\.gradle\caches\9.3.0\transforms\58ecaef45d0c88b5228f6debfc781aa1\workspace\transformed\room-runtime-2.6.1\res
+in.garumarajv.teacher.app-lifecycle-livedata-2.6.2-14 C:\Users\pc\.gradle\caches\9.3.0\transforms\5bfa4b5b4301f0816fdcd21742d9e72b\workspace\transformed\lifecycle-livedata-2.6.2\res
+in.garumarajv.teacher.app-recyclerview-1.1.0-15 C:\Users\pc\.gradle\caches\9.3.0\transforms\65ac5f6b2a5eb6030d2c378829fbb5d5\workspace\transformed\recyclerview-1.1.0\res
+in.garumarajv.teacher.app-swiperefreshlayout-1.1.0-16 C:\Users\pc\.gradle\caches\9.3.0\transforms\6e0e9f35e47f72f997e92f930873f7d4\workspace\transformed\swiperefreshlayout-1.1.0\res
+in.garumarajv.teacher.app-sqlite-2.4.0-17 C:\Users\pc\.gradle\caches\9.3.0\transforms\77ae7cf4e5808b01e54a20273d3a8d60\workspace\transformed\sqlite-2.4.0\res
+in.garumarajv.teacher.app-lifecycle-service-2.6.2-18 C:\Users\pc\.gradle\caches\9.3.0\transforms\877d38b24d074f83fc7d4423a83c5fe7\workspace\transformed\lifecycle-service-2.6.2\res
+in.garumarajv.teacher.app-lifecycle-process-2.6.2-19 C:\Users\pc\.gradle\caches\9.3.0\transforms\8890ae18d41c0446c820b94b6e5d648d\workspace\transformed\lifecycle-process-2.6.2\res
+in.garumarajv.teacher.app-tracing-1.2.0-20 C:\Users\pc\.gradle\caches\9.3.0\transforms\88d40ecdf360b07973cb362f5cf4ee79\workspace\transformed\tracing-1.2.0\res
+in.garumarajv.teacher.app-lifecycle-viewmodel-savedstate-2.6.2-21 C:\Users\pc\.gradle\caches\9.3.0\transforms\8edc5f2f7aedb7b8cda3f13e193adb04\workspace\transformed\lifecycle-viewmodel-savedstate-2.6.2\res
+in.garumarajv.teacher.app-material-1.12.0-22 C:\Users\pc\.gradle\caches\9.3.0\transforms\9ca02ca2982c60b1663982ee7949b7f8\workspace\transformed\material-1.12.0\res
+in.garumarajv.teacher.app-core-1.13.0-23 C:\Users\pc\.gradle\caches\9.3.0\transforms\9dbe003f5f4ab559500255e35f99974e\workspace\transformed\core-1.13.0\res
+in.garumarajv.teacher.app-profileinstaller-1.3.1-24 C:\Users\pc\.gradle\caches\9.3.0\transforms\a527f1749e6dc4731bf9fb0339f518f0\workspace\transformed\profileinstaller-1.3.1\res
+in.garumarajv.teacher.app-emoji2-1.3.0-25 C:\Users\pc\.gradle\caches\9.3.0\transforms\a8bc966f5d1cd104e70fe4fef563e67e\workspace\transformed\emoji2-1.3.0\res
+in.garumarajv.teacher.app-viewpager2-1.0.0-26 C:\Users\pc\.gradle\caches\9.3.0\transforms\ad36721d488f1dba3b207c0d2e6ea00f\workspace\transformed\viewpager2-1.0.0\res
+in.garumarajv.teacher.app-constraintlayout-2.0.1-27 C:\Users\pc\.gradle\caches\9.3.0\transforms\b0f2baab193542be6a4b8e9f155593e1\workspace\transformed\constraintlayout-2.0.1\res
+in.garumarajv.teacher.app-work-runtime-2.10.0-28 C:\Users\pc\.gradle\caches\9.3.0\transforms\b79a483801f91eeb54ac3d2052cb8148\workspace\transformed\work-runtime-2.10.0\res
+in.garumarajv.teacher.app-fragment-1.5.4-29 C:\Users\pc\.gradle\caches\9.3.0\transforms\d05fdeba92c55aa19d1ee68e2719d0e3\workspace\transformed\fragment-1.5.4\res
+in.garumarajv.teacher.app-activity-1.8.0-30 C:\Users\pc\.gradle\caches\9.3.0\transforms\dc3a2dfce55f6ff77f45b310b3b47011\workspace\transformed\activity-1.8.0\res
+in.garumarajv.teacher.app-lifecycle-livedata-core-2.6.2-31 C:\Users\pc\.gradle\caches\9.3.0\transforms\df6dee03c059f5c0650d4fb0b6e99b08\workspace\transformed\lifecycle-livedata-core-2.6.2\res
+in.garumarajv.teacher.app-cardview-1.0.0-32 C:\Users\pc\.gradle\caches\9.3.0\transforms\e1478ee979d8f002faadbb9fe7c43d95\workspace\transformed\cardview-1.0.0\res
+in.garumarajv.teacher.app-core-ktx-1.13.0-33 C:\Users\pc\.gradle\caches\9.3.0\transforms\e5903a3fb00f6efc77b7afa0157c98ae\workspace\transformed\core-ktx-1.13.0\res
+in.garumarajv.teacher.app-emoji2-views-helper-1.3.0-34 C:\Users\pc\.gradle\caches\9.3.0\transforms\ec5a6f6361b5ecd2ae8628c5e3f074c4\workspace\transformed\emoji2-views-helper-1.3.0\res
+in.garumarajv.teacher.app-savedstate-1.2.1-35 C:\Users\pc\.gradle\caches\9.3.0\transforms\fcf22e68a2afcbc74368caf22506dcc3\workspace\transformed\savedstate-1.2.1\res
+in.garumarajv.teacher.app-sqlite-framework-2.4.0-36 C:\Users\pc\.gradle\caches\9.3.0\transforms\ff9c09753ed132bcb4b9373c4d133a54\workspace\transformed\sqlite-framework-2.4.0\res
+in.garumarajv.teacher.app-local-37 E:\gjv ver20\teacher-android-app\app\build\generated\res\pngs\local\debug
+in.garumarajv.teacher.app-local-38 E:\gjv ver20\teacher-android-app\app\build\generated\res\resValues\local\debug
+in.garumarajv.teacher.app-packageLocalDebugResources-39 E:\gjv ver20\teacher-android-app\app\build\intermediates\incremental\localDebug\packageLocalDebugResources\merged.dir
+in.garumarajv.teacher.app-packageLocalDebugResources-40 E:\gjv ver20\teacher-android-app\app\build\intermediates\incremental\localDebug\packageLocalDebugResources\stripped.dir
+in.garumarajv.teacher.app-localDebug-41 E:\gjv ver20\teacher-android-app\app\build\intermediates\merged_res\localDebug\mergeLocalDebugResources
+in.garumarajv.teacher.app-debug-42 E:\gjv ver20\teacher-android-app\app\src\debug\res
+in.garumarajv.teacher.app-local-43 E:\gjv ver20\teacher-android-app\app\src\local\res
+in.garumarajv.teacher.app-localDebug-44 E:\gjv ver20\teacher-android-app\app\src\localDebug\res
+in.garumarajv.teacher.app-main-45 E:\gjv ver20\teacher-android-app\app\src\main\res

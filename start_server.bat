@@ -1,0 +1,3 @@
+@echo off
+echo Starting Garumara Jatiya Vidyalaya Server...
+agy-node server.js

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gold_400">#E0C15A</color>
+    <color name="gold_500">#D4AF37</color>
+    <color name="navy_900">#0B1728</color>
+    <color name="navy_950">#07111F</color>
+    <color name="white">#FFFFFF</color>
+    <style name="Theme.GarumaraTeacher" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/gold_500</item>
+        <item name="colorOnPrimary">@color/navy_950</item>
+        <item name="colorSecondary">@color/gold_400</item>
+        <item name="android:navigationBarColor">@color/navy_950</item>
+        <item name="android:statusBarColor">@color/navy_950</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+</resources>

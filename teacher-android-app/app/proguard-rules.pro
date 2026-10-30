@@ -1,0 +1,1 @@
+-keepclassmembers class in.garumarajv.teacher.MainActivity$AppBridge { public *; }

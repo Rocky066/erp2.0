@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Garumara Jatiya Vidyalaya</title>
+  <meta name="description" content="Discover our history, mission, vision, and core educational values. Learn what makes Garumara Jatiya Vidyalaya a center of character and learning.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="icon" href="/logo.jpg" type="image/jpeg">
+  <script src="/js/icon-runtime.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- Header -->
+  <header id="shared-header" class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-transparent"></header>
+
+  <!-- Page Title Banner -->
+  <section class="relative pt-36 pb-16 bg-slate-900 overflow-hidden flex items-center">
+    <div class="absolute inset-0 z-0">
+      <img src="uploads/school_banner.jpg" alt="Banner" class="w-full h-full object-cover brightness-50 dark:brightness-[0.25]">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+    </div>
+    <div class="container mx-auto px-6 relative z-10 space-y-3">
+      <span class="bg-amber-500/10 text-amber-500 border border-amber-500/25 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Institution Profile</span>
+      <h1 class="text-4xl sm:text-5xl font-black text-white">About Our School</h1>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
+    <div class="container mx-auto px-6 max-w-4xl space-y-16">
+      
+      <!-- Core Info -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div class="space-y-6">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Our Story & Mission</h2>
+          <p id="about-school-text" class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+            Established in 2023, Garumara Jatiya Vidyalaya was founded by a cooperative body of dedicated educationists who aimed to establish a high-quality Assamese Medium School in Garumara, Nagaon, Assam. We wanted to fill the gap of high-standard English-friendly Assamese education in the rural surroundings of Nagaon.
+          </p>
+          <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+            Over the years, the school has grown into a premier institution offering education from lower-kindergarten up to Class X, recognized for its standard curriculum, high teacher-to-student ratio, and consistent academic excellence.
+          </p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-800/40 border border-slate-200/60 dark:border-slate-800/60 p-8 rounded-3xl space-y-4">
+          <h3 class="font-bold text-lg text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-2">School Features</h3>
+          <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400 font-medium">
+            <li class="flex items-center space-x-2"><span class="text-amber-500">✓</span> <span>Modern Smart Classrooms</span></li>
+            <li class="flex items-center space-x-2"><span class="text-amber-500">✓</span> <span>Well-Equipped Science & Computer Labs</span></li>
+            <li class="flex items-center space-x-2"><span class="text-amber-500">✓</span> <span>Serene Campus close to National Park</span></li>
+            <li class="flex items-center space-x-2"><span class="text-amber-500">✓</span> <span>Qualified and Compassionate Teachers</span></li>
+            <li class="flex items-center space-x-2"><span class="text-amber-500">✓</span> <span>Rich extracurricular sports & art programs</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Vision & Values -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 border-t border-slate-100 dark:border-slate-800">
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Our Vision</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+            To build a value-oriented learning hub where children grow into intellectual, creative, and patriotic leaders capable of uplifting society and competing at national and global arenas.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Our Mission</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+            To deliver affordable, high-quality, and modern education that blends logic and environmental consciousness with ethical characters, ensuring child-centric and comprehensive training.
+          </p>
+        </div>
+      </div>
+
+      <!-- Management -->
+      <div class="space-y-8 pt-8 border-t border-slate-100 dark:border-slate-800">
+        <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white text-center">Governing Board & Leadership</h3>
+        <div id="about-leadership-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+          <div class="col-span-3 text-center text-slate-400 py-6">Loading leadership details...</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="shared-footer" class="bg-slate-950 text-slate-300 transition-colors duration-300 border-t border-slate-900"></footer>
+
+  <!-- Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    async function loadAboutLeadership() {
+      const grid = document.getElementById('about-leadership-grid');
+      if (!grid) return;
+      try {
+        const leaders = await ApiService.getLeadership();
+        grid.innerHTML = '';
+        
+        const defaultIcons = {
+          principal: '🎓',
+          vice_principal: '🖋️',
+          academic_director: '💼'
+        };
+
+        leaders.forEach(l => {
+          const card = document.createElement('div');
+          card.className = 'bg-slate-50 dark:bg-slate-800/20 p-6 rounded-2xl flex flex-col items-center justify-center space-y-3';
+          
+          let photoMarkup = '';
+          if (l.photo) {
+            photoMarkup = `<img src="${l.photo}" alt="${l.name}" class="w-16 h-16 rounded-full object-cover border border-slate-200 dark:border-slate-800 shadow-sm">`;
+          } else {
+            const icon = defaultIcons[l.id] || '👤';
+            photoMarkup = `<span class="block text-3xl">${icon}</span>`;
+          }
+
+          const fullName = l.name + (l.qualification ? `, ${l.qualification}` : '');
+
+          card.innerHTML = `
+            ${photoMarkup}
+            <div>
+              <h4 class="font-bold text-slate-900 dark:text-white text-base">${fullName}</h4>
+              <span class="text-xs text-slate-400 font-semibold uppercase block tracking-wider mt-1">${l.designation}</span>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      } catch (err) {
+        grid.innerHTML = `<div class="col-span-3 text-slate-400 py-6">Failed to load leadership team details.</div>`;
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', loadAboutLeadership);
+  </script>
+</body>
+</html>

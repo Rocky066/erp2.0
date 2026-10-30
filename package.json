@@ -1,0 +1,19 @@
+{
+  "name": "garumara-school-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Garumara Jatiya Vidyalaya School Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node -c server.js && node -c api/index.js",
+    "migrate:supabase": "node scripts/migrate-to-supabase.js",
+    "test": "node test.js && node subject-audit.test.js && node teacher-student-flow.test.js && node exam-marks-sync.test.js && node fee-collection-flow.test.js && node fee-complete-audit.test.js && node fee-overdue-system.test.js && node legacy-fee-due.test.js && node fee-real-data-audit.test.js && node id-card-export.test.js && node id-card-signature.test.js && node admit-card-signature.test.js && node teacher-directory-icons.test.js && node encoding-audit.test.js && node teacher-android-app.test.js && node print-portal.test.js && node fee-whatsapp-e2e.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0"
+  }
+}

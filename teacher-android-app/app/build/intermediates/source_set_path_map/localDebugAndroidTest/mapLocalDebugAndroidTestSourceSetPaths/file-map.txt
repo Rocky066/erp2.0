@@ -1,0 +1,4 @@
+in.garumarajv.teacher.test.app-local-0 E:\gjv ver20\teacher-android-app\app\build\generated\res\resValues\androidTest\local\debug
+in.garumarajv.teacher.test.app-mergeLocalDebugAndroidTestResources-1 E:\gjv ver20\teacher-android-app\app\build\intermediates\incremental\localDebugAndroidTest\mergeLocalDebugAndroidTestResources\merged.dir
+in.garumarajv.teacher.test.app-mergeLocalDebugAndroidTestResources-2 E:\gjv ver20\teacher-android-app\app\build\intermediates\incremental\localDebugAndroidTest\mergeLocalDebugAndroidTestResources\stripped.dir
+in.garumarajv.teacher.test.app-localDebugAndroidTest-3 E:\gjv ver20\teacher-android-app\app\build\intermediates\merged_res\localDebugAndroidTest\mergeLocalDebugAndroidTestResources

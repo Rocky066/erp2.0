@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Admin Login — School ERP Multi-Tenant SaaS</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" href="/logo.jpg" type="image/jpeg">
+</head>
+<body class="bg-slate-950 text-slate-100 flex min-h-screen items-center justify-center p-4">
+
+  <!-- Background decorations -->
+  <div class="fixed -top-40 -left-40 w-96 h-96 rounded-full bg-blue-600/10 blur-3xl"></div>
+  <div class="fixed -bottom-40 -right-40 w-96 h-96 rounded-full bg-indigo-600/10 blur-3xl"></div>
+
+  <div class="glass border border-slate-800 p-8 sm:p-10 rounded-3xl w-full max-w-md shadow-2xl relative z-10 space-y-8 bg-slate-900/80 backdrop-blur-xl">
+    <div class="text-center space-y-2">
+      <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-3xl font-black text-white mx-auto shadow-lg shadow-blue-500/20 border border-blue-400/20">
+        ⚡
+      </div>
+      <h2 class="text-2xl font-black tracking-tight text-white">SaaS Super Admin</h2>
+      <p class="text-xs text-slate-400 font-medium">Multi-School Platform Management Console</p>
+    </div>
+
+    <!-- Error message alert -->
+    <div id="error-alert" class="hidden bg-red-950/60 text-red-400 p-4 rounded-xl text-xs font-semibold border border-red-800/40"></div>
+
+    <form id="superadmin-login-form" class="space-y-4 text-xs font-medium">
+      <div class="space-y-1">
+        <label class="text-slate-300 font-bold uppercase tracking-wider text-[11px]">Super Admin Email</label>
+        <input type="email" id="username" required placeholder="superadmin@schoolerp.in" class="w-full bg-slate-950/60 border border-slate-800 rounded-xl px-4 py-3.5 text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition-colors">
+      </div>
+      <div class="space-y-1 relative">
+        <label class="text-slate-300 font-bold uppercase tracking-wider text-[11px]">Master Password</label>
+        <input type="password" id="password" required placeholder="••••••••" class="w-full bg-slate-950/60 border border-slate-800 rounded-xl px-4 py-3.5 pr-10 text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition-colors">
+        <button type="button" id="toggle-password" class="absolute right-3.5 top-8.5 text-slate-500 hover:text-slate-300 focus:outline-none text-base">
+          👁️
+        </button>
+      </div>
+      <button type="submit" id="submit-btn" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white w-full py-4 rounded-xl font-bold text-sm tracking-wide transition-all shadow-lg shadow-blue-600/25 mt-2 flex items-center justify-center space-x-2">
+        <span id="btn-text">Authenticate Super Admin</span>
+        <span id="btn-spinner" class="hidden animate-spin">⏳</span>
+      </button>
+    </form>
+
+    <div class="text-center pt-2">
+      <a href="/" class="text-slate-500 hover:text-slate-300 text-xs font-semibold block transition-colors">&larr; Return to School Site</a>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('superadmin-login-form');
+    const errorAlert = document.getElementById('error-alert');
+    const toggleBtn = document.getElementById('toggle-password');
+    const passwordInput = document.getElementById('password');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnSpinner = document.getElementById('btn-spinner');
+
+    toggleBtn.addEventListener('click', () => {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      toggleBtn.innerText = type === 'password' ? '👁️' : '🙈';
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorAlert.classList.add('hidden');
+      btnText.innerText = 'Verifying...';
+      btnSpinner.classList.remove('hidden');
+      submitBtn.disabled = true;
+
+      try {
+        const username = document.getElementById('username').value.trim();
+        const password = passwordInput.value;
+
+        const res = await fetch('/api/superadmin/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password })
+        });
+
+        const data = await res.json();
+        if (!res.ok) {
+          throw new Error(data.error || 'Super Admin login failed');
+        }
+
+        localStorage.setItem('saas_superadmin_token', data.token);
+        localStorage.setItem('saas_superadmin_user', JSON.stringify({ username: data.username, name: data.name, role: data.role }));
+        window.location.href = '/superadmin/index.html';
+      } catch (err) {
+        errorAlert.innerText = err.message;
+        errorAlert.classList.remove('hidden');
+      } finally {
+        btnText.innerText = 'Authenticate Super Admin';
+        btnSpinner.classList.add('hidden');
+        submitBtn.disabled = false;
+      }
+    });
+
+    // Auto-redirect if already authenticated
+    const existingToken = localStorage.getItem('saas_superadmin_token');
+    if (existingToken) {
+      fetch('/api/superadmin/me', {
+        headers: { 'Authorization': `Bearer ${existingToken}` }
+      }).then(r => {
+        if (r.ok) window.location.href = '/superadmin/index.html';
+      }).catch(() => {});
+    }
+  </script>
+</body>
+</html>

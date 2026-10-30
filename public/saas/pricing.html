@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Plans & Pricing — EduPulse Cloud School ERP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" href="/logo.jpg" type="image/jpeg">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-slate-900/85 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-xl font-black text-white shadow-lg shadow-blue-500/25">
+          ⚡
+        </div>
+        <div>
+          <span class="text-base sm:text-lg font-black tracking-tight text-white block leading-tight">EduPulse <span class="text-blue-400">Cloud</span></span>
+          <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">School ERP SaaS</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-7 text-xs font-bold text-slate-300">
+        <a href="/" class="hover:text-blue-400">Home</a>
+        <a href="/#features" class="hover:text-blue-400">Features</a>
+        <a href="/#portals" class="hover:text-blue-400">Portals</a>
+        <a href="/pricing" class="text-blue-400">Pricing</a>
+        <a href="/about" class="hover:text-blue-400">About Us</a>
+        <a href="/contact" class="hover:text-blue-400">Contact</a>
+      </nav>
+
+      <div class="flex items-center space-x-3">
+        <a href="/login" class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl text-xs font-bold border border-slate-700">
+          School Login
+        </a>
+        <a href="/#demo" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-xl text-xs font-bold shadow-lg shadow-blue-600/20">
+          Book Demo
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+    
+    <div class="text-center space-y-4 max-w-3xl mx-auto">
+      <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Predictable Institutional Costs</span>
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight">Simple, Transparent School Pricing</h1>
+      <p class="text-sm sm:text-base text-slate-400">
+        No hidden setup fees. No surprise per-user charges. Pick the tier that matches your school's current enrollment and upgrade anytime.
+      </p>
+
+      <!-- Billing Period Switch -->
+      <div class="inline-flex items-center bg-slate-900 p-1 rounded-xl border border-slate-800 text-xs font-bold mt-4">
+        <button id="p-monthly-btn" class="px-4 py-1.5 rounded-lg bg-blue-600 text-white transition-all">Monthly Billing</button>
+        <button id="p-annual-btn" class="px-4 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all">
+          <span>Annual Billing</span>
+          <span class="text-[10px] bg-emerald-950 text-emerald-400 px-1.5 py-0.5 rounded ml-1 font-extrabold">20% SAVINGS</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Pricing Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Plan 1: Free Trial -->
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-6 flex flex-col justify-between">
+        <div class="space-y-4">
+          <span class="text-xs font-extrabold text-blue-400 uppercase tracking-wider block">Trial Tier</span>
+          <h3 class="text-xl font-black text-white">Free 30-Day Trial</h3>
+          <div class="flex items-baseline space-x-1">
+            <span class="text-3xl font-black text-white">₹0</span>
+            <span class="text-xs text-slate-500">/ 30 Days</span>
+          </div>
+          <p class="text-xs text-slate-400">Evaluate full core features risk-free with up to 100 students.</p>
+          <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Up to 100 Students</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Dedicated School Subdomain</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Daily Attendance & Student Directory</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Fee Collection & Digital Receipts</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>School Public Website</span></li>
+          </ul>
+        </div>
+        <a href="/#demo" class="w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-3 rounded-xl border border-slate-700 block transition-all">
+          Start Free Trial
+        </a>
+      </div>
+
+      <!-- Plan 2: Starter -->
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-6 flex flex-col justify-between">
+        <div class="space-y-4">
+          <span class="text-xs font-extrabold text-indigo-400 uppercase tracking-wider block">Starter</span>
+          <h3 class="text-xl font-black text-white">Starter Tier</h3>
+          <div class="flex items-baseline space-x-1">
+            <span class="text-3xl font-black text-white card-price" data-monthly="₹2,499" data-annual="₹1,999">₹2,499</span>
+            <span class="text-xs text-slate-500">/ month</span>
+          </div>
+          <p class="text-xs text-slate-400">Built for single primary & middle schools up to 300 students.</p>
+          <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Up to 300 Students</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Dedicated School Subdomain</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Automated SMS Receipts</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Exam Result Sheets & Grades</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Daily Automated Cloud Backups</span></li>
+          </ul>
+        </div>
+        <a href="/#demo" class="w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-3 rounded-xl border border-slate-700 block transition-all">
+          Choose Starter
+        </a>
+      </div>
+
+      <!-- Plan 3: Professional -->
+      <div class="bg-slate-900 border-2 border-blue-500 rounded-3xl p-6 space-y-6 flex flex-col justify-between relative shadow-xl shadow-blue-500/10">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] uppercase font-black px-3 py-0.5 rounded-full shadow">
+          RECOMMENDED FOR HIGH SCHOOLS
+        </div>
+        <div class="space-y-4">
+          <span class="text-xs font-extrabold text-blue-400 uppercase tracking-wider block">Professional</span>
+          <h3 class="text-xl font-black text-white">Professional Tier</h3>
+          <div class="flex items-baseline space-x-1">
+            <span class="text-3xl font-black text-white card-price" data-monthly="₹5,999" data-annual="₹4,799">₹5,999</span>
+            <span class="text-xs text-slate-500">/ month</span>
+          </div>
+          <p class="text-xs text-slate-400">Complete institutional capability with Meta WhatsApp Cloud alerts.</p>
+          <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Up to 1,000 Students</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Meta WhatsApp Cloud API Automation</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>ID Card & Admit Card Generator</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Teacher Mobile Dashboard</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Online Public Admission Portal</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Priority WhatsApp Helpline Support</span></li>
+          </ul>
+        </div>
+        <a href="/#demo" class="w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs py-3 rounded-xl shadow-lg shadow-blue-600/25 block transition-all">
+          Get Professional
+        </a>
+      </div>
+
+      <!-- Plan 4: Enterprise -->
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-6 flex flex-col justify-between">
+        <div class="space-y-4">
+          <span class="text-xs font-extrabold text-purple-400 uppercase tracking-wider block">Enterprise</span>
+          <h3 class="text-xl font-black text-white">Enterprise Tier</h3>
+          <div class="flex items-baseline space-x-1">
+            <span class="text-3xl font-black text-white card-price" data-monthly="₹12,999" data-annual="₹10,399">₹12,999</span>
+            <span class="text-xs text-slate-500">/ month</span>
+          </div>
+          <p class="text-xs text-slate-400">For multi-branch schools, large colleges, and trust networks.</p>
+          <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Unlimited Students & Faculty</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Custom Domain CNAME (e.g. portal.school.edu)</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Multi-Branch Sharding & Unified Console</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>Dedicated Cloud Database Infrastructure</span></li>
+            <li class="flex items-center space-x-2"><span class="text-emerald-400">✔</span><span>24/7 Dedicated Account Manager</span></li>
+          </ul>
+        </div>
+        <a href="/contact" class="w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-3 rounded-xl border border-slate-700 block transition-all">
+          Contact for Enterprise
+        </a>
+      </div>
+    </div>
+
+    <!-- Frequently Asked Questions -->
+    <div class="max-w-3xl mx-auto space-y-6 pt-8">
+      <h2 class="text-xl sm:text-2xl font-black text-white text-center">Frequently Asked Questions</h2>
+      <div class="space-y-4 text-xs">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-2">
+          <h4 class="font-bold text-white text-sm">How is our school's data kept separate from other schools?</h4>
+          <p class="text-slate-400 leading-relaxed">Every school tenant operates with isolated record identification. A teacher or administrator logged into one school's subdomain cannot access, query, or view any records belonging to another school. Complete database exports can be created and downloaded directly from the Admin Portal anytime.</p>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-2">
+          <h4 class="font-bold text-white text-sm">Do parents need to download an application from the Play Store?</h4>
+          <p class="text-slate-400 leading-relaxed">No. We believe in zero-friction parent communication. Daily absence alerts, fee payment receipts, and exam schedules are delivered directly via WhatsApp messages and SMS to guardians' existing phone numbers, with links to the school's public website.</p>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-2">
+          <h4 class="font-bold text-white text-sm">Can we use our own custom domain like portal.myschool.edu.in?</h4>
+          <p class="text-slate-400 leading-relaxed">Yes. While every school is immediately provided an isolated subdomain (e.g. <code>yourschool.schoolerp.in</code>), Enterprise tier subscribers can map their custom institutional domain via a simple CNAME DNS record.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 border-t border-slate-800 py-8 text-center text-xs text-slate-500">
+    <p>&copy; 2026 EduPulse Cloud ERP SaaS Platform. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const mBtn = document.getElementById('p-monthly-btn');
+    const aBtn = document.getElementById('p-annual-btn');
+    const prices = document.querySelectorAll('.card-price');
+
+    mBtn.addEventListener('click', () => {
+      mBtn.className = 'px-4 py-1.5 rounded-lg bg-blue-600 text-white transition-all';
+      aBtn.className = 'px-4 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all';
+      prices.forEach(el => el.innerText = el.dataset.monthly);
+    });
+
+    aBtn.addEventListener('click', () => {
+      aBtn.className = 'px-4 py-1.5 rounded-lg bg-blue-600 text-white transition-all';
+      mBtn.className = 'px-4 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all';
+      prices.forEach(el => el.innerText = el.dataset.annual);
+    });
+  </script>
+</body>
+</html>

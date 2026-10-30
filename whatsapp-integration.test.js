@@ -1,0 +1,14 @@
+const assert=require('assert'),fs=require('fs'),Service=require('./services/whatsappService'),Store=require('./services/whatsappStore');
+assert.strictEqual(Service.formatIndianMobileNumber('9876543210'),'919876543210');
+assert.strictEqual(Service.formatIndianMobileNumber('+91 98765 43210'),'919876543210');
+assert.throws(()=>Service.formatIndianMobileNumber('12345'),/valid 10-digit/);
+const db={settings:{}};const safe=Store.update(db,{enabled:true,mode:'TEST',accessToken:'secret-test-token',verifyToken:'verify-me',phoneNumberId:'123',wabaId:'456',graphApiVersion:'v23.0',templates:{admission_confirmation:'gjv_admission'},automation:{admissionConfirmation:true}},'unit-secret','admin');
+assert(safe.accessTokenConfigured&&!JSON.stringify(safe).includes('secret-test-token'));
+assert(!JSON.stringify(db).includes('secret-test-token'));
+assert.strictEqual(Store.config(db,'unit-secret').accessToken,'secret-test-token');
+const source=fs.readFileSync('server.js','utf8'),html=fs.readFileSync('public/admin/index.html','utf8'),client=fs.readFileSync('public/js/api.js','utf8');
+for(const route of ['/api/whatsapp/status','/api/whatsapp/test','/api/whatsapp/send','/api/whatsapp/logs','/api/whatsapp/settings','/api/whatsapp/templates','/api/whatsapp/webhook'])assert(source.includes(route),route+' route missing');
+assert(source.includes("queueWhatsAppAutomation('admission'"));assert(source.includes('sendFeeWhatsAppAfterPayment')&&source.includes('newFee.whatsapp=await sendFeeWhatsAppAfterPayment')&&source.includes('summary.whatsapp=await sendFeeWhatsAppAfterPayment'));assert(source.includes("queueWhatsAppAutomation('absent'"));
+assert(html.includes('id="tab-whatsapp"')&&html.includes('id="wa-test-send"')&&html.includes('id="wa-logs"'));
+assert(client.includes('getWhatsAppSettings()')&&client.includes('sendWhatsAppTest(data)'));
+console.log('WHATSAPP INTEGRATION CONTRACT TESTS PASSED');

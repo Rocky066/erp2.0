@@ -1,0 +1,701 @@
+{
+  "settings": {
+    "adminUsername": "admin@garumarajatiyavidyalaya.in",
+    "adminPasswordHash": "df70ab441d877ff3932a463621c7498a1c0a368c12653b1b2915d49f26b647178a5ff58a0712cfbf567b2e6048e2c6ee0d1836b79c36fa444b32c0f66e5e808d",
+    "adminPasswordSalt": "f02b91051483f6d5a40e3a3e43635be2",
+    "notificationsEnabled": false,
+    "whatsappEnabled": true,
+    "smsEnabled": false,
+    "whatsappTemplate": "Dear Parent, {message} - Garumara Jatiya Vidyalaya",
+    "smsTemplate": "Dear Parent, {message} - GJV",
+    "websiteContent": {
+      "schoolName": "Garumara Jatiya Vidyalaya",
+      "tagline": "Building Character, Cultivating Excellence",
+      "aboutText": "Garumara Jatiya Vidyalaya is a premier educational institution established with the mission of providing holistic, high-quality, and affordable education. Situated near the serene Garumara National Park, we nurture young minds with standard curriculum combined with rich cultural values, physical education, and advanced science programs.",
+      "principalName": "Muzahirul Hoque Anchari",
+      "principalMessage": "Welcome to Garumara Jatiya Vidyalaya. As Principal, it is a privilege to lead this institution dedicated to academic achievement and character building. We believe that education is not merely acquiring knowledge, but molding young characters to face global challenges while remaining rooted in our ethical values. We work hand-in-hand with parents to unlock every child's full potential.",
+      "address": "Garumara, Nagaon, Assam â€“ 782140",
+      "phone": "+91 8099456097",
+      "email": "info@garumarajv.in",
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.648348633785!2d88.75618777595304!3d26.707746168560592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e46a782bcfdd49%3A0xc3c5f58bc16db18b!2sLataguri%20High%20School%20(H.S.)!5e0!3m2!1sen!2sin!4v1721240000000!5m2!1sen!2sin"
+    },
+    "admitCardSettings": {
+      "session": "2026-27",
+      "centre": "Garumara Jatiya Vidyalaya",
+      "instructions": "1. Candidates must their Printed Admit Card to the exam hall.\n2. Report at least 30 minutes prior to the exam start time.\n3. Smart gadgets, mobile phones, and calculators are strictly prohibited.",
+      "principalSignatureName": "",
+      "principalSignatureUrl": "/uploads/admit-card-signatures/principal-signature-c45c7656-2840-4e5f-9437-331d335f4a82.png",
+      "principalSignatureUpdatedAt": "2026-08-01T08:28:46.589Z",
+      "examDates": "Unit Test: Aug 10 - Aug 21\nHalf Yearly: Oct 12 - Oct 20\nAnnual: Dec 07 - Dec 18",
+      "academic_session_id": "57414d3b-325b-49c8-ac1d-ab19811f8a4f"
+    },
+    "idCardSettings": {
+      "session": "2026",
+      "principalSignatureName": " ",
+      "principalSignatureImage": "/uploads/id-card-signatures/principal-signature-78ba08b2-fbbb-4dab-bc2b-d9f17c4eb0cd.png",
+      "academic_session_id": "23141b9c-3426-4e0f-8675-ab104b9e53b2"
+    },
+    "printPortalUsername": "print65121315@admin.com",
+    "printPortalPasswordSalt": "7d4053d95384992e4cf8ddd1f6194d4dee8d2f57de38e4da8a323b8f301541aa",
+    "printPortalPasswordHash": "065d7f637c571947393a57235edbf14162c809e2132e15b27fc3a2b0dd8fed2f5766f5df96cdf81ad503cb7284a891cb1443f88e5c09741c303cb6bba215fe1b",
+    "printPortalCredentialsUpdatedAt": "2026-08-04T07:03:47.6173232Z",
+    "academicSession": "2027-28",
+    "academicSessionId": "47ebb676-36ea-4c19-b002-217a6b2498a7",
+    "academic_session_id": "47ebb676-36ea-4c19-b002-217a6b2498a7",
+    "whatsappCloud": {
+      "enabled": true,
+      "mode": "TEST",
+      "phoneNumberId": "1197418463462589",
+      "wabaId": "2280165122834259",
+      "graphApiVersion": "v23.0",
+      "accessTokenEncrypted": "17c773073d5572c840d2e5bc.652af62b0910cb6a305a5055bd29ca77.ca00c80b5e662bdfcd936f30e570d6ad744ab851dafd1f7d741510b98984f6203a98467c720a266d48607f2dcb3e1aae952d3a5f1b3ad087354d1d54edd5e2a50b3c38ac369bbfb1c32ffde44760ab6292c68c3a894737dafe21bce8dc6791e80eea9097e99595af290e3319db5d289027cb055ded82f3c6379b527d69e659cd014e8992d095347d3f810997dcf24c2139de5afc08ee63b320ecab873e82f2b753e9e6319693d4560d4b7b63d46c29ae416611b84a2de6f16b81da9dd8a8fee0c7bbe7583080cd95e0af6125cfe527a89ad1737bfa06917e2ad0c4652cac40e06957aa359f55aa9b2cb2c81dadc726834145c47351d93c4a22c6593e424274f7f7e41249502339638b79b3c58baa442eaeb8f22260ddde8f5d9600b01d721a022cfd04f00e15247df479e189723c15e17de8a838b9",
+      "verifyTokenEncrypted": "2993e68aeb1507434872bca9.cb8df97823a58eac2943a9f87031060b.bda3cef24ad9c15aad9d2bb4aede5698504fc46240e4327504f8bc406b472b21a90eb04d02f95890cfdb1b0df32bf095d826331885dc33ede0605180c4663eb670b81ba8e36c78fd6619f2f0240316efd67c77e66ada933a2d4808b5b5223202db4a5d3d5251cf1613ec627ceb19f1ed0f1d31d5a02209f2152e3abf98480694a147ca08e522c5edb5646277cde2681cdff837ee4a26f3397dfd634cce43e48e1d023e8025d459bbc6705adad97ce78f2263eae4b66d4ebeed4270ed7dbc291f8aa3fcc5e2e3be661d7c6e2ea88d8a8e73ce1d7cb1cf3ec07c0f13a61c3e548dcacb0211eb5970beee536202e8dfa1caa6319f3b8e9e6dd04ead58473da722aa795dfa79df9b2877d66e66b937677a93c54f1347e5e7429822bae24de01a8167b5dd00cd16f94e793a7cbc7a",
+      "templates": {
+        "admission_confirmation": "",
+        "fee_payment_confirmation": "",
+        "fee_due_reminder": "fee_due_reminder",
+        "fee_overdue_reminder": "fee_overdue_reminder",
+        "hello_world": "hello_world",
+        "student_absent_alert": "",
+        "exam_notice": "",
+        "school_notice": ""
+      },
+      "automation": {
+        "admissionConfirmation": false,
+        "feePaymentConfirmation": false,
+        "feeDueReminder": true,
+        "overdueReminder": true,
+        "absentAlert": false,
+        "examNotification": false,
+        "schoolNotices": false
+      },
+      "updatedAt": "2026-08-20T11:44:34.433Z",
+      "updatedBy": "admin@garumarajatiyavidyalaya.in",
+      "templateLanguages": {
+        "admission_confirmation": "en_US",
+        "fee_payment_confirmation": "en_US",
+        "fee_due_reminder": "en",
+        "fee_overdue_reminder": "en",
+        "hello_world": "en_US",
+        "student_absent_alert": "en_US",
+        "exam_notice": "en_US",
+        "school_notice": "en_US"
+      }
+    }
+  },
+  "students": [],
+  "attendance": [],
+  "fees": [],
+  "exams": [],
+  "notices": [
+    {
+      "id": "1",
+      "date": "2026-07-15",
+      "title": "Admission Open for Session 2026-27",
+      "content": "Admissions are open for Classes Lower Kindergarten (LKG) to Class VIII. Online application forms are available on the Admission section. Visit the school office on working days between 10:00 AM and 2:00 PM for inquiries.",
+      "target": "All",
+      "isUrgent": true
+    },
+    {
+      "id": "2",
+      "date": "2026-07-10",
+      "title": "Summer Vacation Notice",
+      "content": "The school will remain closed for summer vacation from May 20, 2026, to June 15, 2026. Normal classes will resume on June 16, 2026, according to the standard schedule.",
+      "target": "All",
+      "isUrgent": false
+    }
+  ],
+  "gallery": [
+    {
+      "id": "1784435605822",
+      "title": "Picnic",
+      "image": "/uploads/gallery_1784435605821.jpeg",
+      "date": "2026-07-19"
+    },
+    {
+      "id": "1784435596317",
+      "title": "Picnic",
+      "image": "/uploads/gallery_1784435596315.jpeg",
+      "date": "2026-07-19"
+    },
+    {
+      "id": "1784435573790",
+      "title": "Picnic",
+      "image": "/uploads/gallery_1784435573789.jpeg",
+      "date": "2026-07-19"
+    },
+    {
+      "id": "1784392034129",
+      "title": "Logo",
+      "image": "/uploads/gallery_1784392034127.png",
+      "date": "2026-07-18"
+    },
+    {
+      "id": "1",
+      "title": "Annual Sports Day 2026",
+      "image": "/uploads/sports_day.jpg",
+      "date": "2026-02-14"
+    },
+    {
+      "id": "2",
+      "title": "Science Exhibition",
+      "image": "/uploads/science_fair.jpg",
+      "date": "2026-03-12"
+    }
+  ],
+  "notifications": [],
+  "leadership": [
+    {
+      "id": "principal",
+      "name": "Anarul Hussain                                                                  ",
+      "qualification": "BA. D.El.Ed",
+      "designation": "Principal, Garumara Jatiya Vidyalaya",
+      "message": "Welcome to Garumara Jatiya Vidyalaya. As Principal, it is a privilege to lead this institution dedicated to academic achievement and character building. We believe that education is not merely acquiring knowledge, but molding young characters to face global challenges.",
+      "photo": "uploads/principal.jpg"
+    },
+    {
+      "id": "vice_principal",
+      "name": "Muzahirul Hoque Anchari",
+      "qualification": "B Pharm",
+      "designation": "Vice Principal",
+      "message": "At GJV, we aim to provide an environment where students can discover their true capabilities. I welcome all students and parents to work with us to achieve excellence in all domains of life.",
+      "photo": "uploads/vice_principal.jpg"
+    },
+    {
+      "id": "academic_director",
+      "name": "Ahiya Alam",
+      "qualification": "BSc",
+      "designation": "Academic Director",
+      "message": "Our curriculum is designed to balance standard academics with creative thinking and physical education. We strive to provide the best tools and pedagogy to guide our students on their educational journey.",
+      "photo": "uploads/academic_director.jpg"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "tch_1",
+      "empId": "TCH-2026-0001",
+      "name": "Pooja Baruah",
+      "photo": "",
+      "gender": "Female",
+      "dob": "1988-07-28",
+      "mobile": "9854012345",
+      "email": "pooja.b@garumarajv.org",
+      "aadhaar": "345678901234",
+      "qualification": "M.Sc. Mathematics, B.Ed",
+      "experience": "7 Years",
+      "subject": "Mathematics",
+      "classTeacher": "Class V-A",
+      "joiningDate": "2023-04-01",
+      "salary": 28000,
+      "status": "Active",
+      "address": "Station Road, Nagaon, Assam",
+      "emergencyContact": "9854099999",
+      "bankDetails": {
+        "bankName": "State Bank of India",
+        "accountNo": "30987654321",
+        "ifsc": "SBIN0000123"
+      },
+      "documents": []
+    },
+    {
+      "id": "tch_2",
+      "empId": "TCH-2026-0002",
+      "name": "Rajesh Saikia",
+      "photo": "",
+      "gender": "Male",
+      "dob": "1985-03-12",
+      "mobile": "9435012345",
+      "email": "rajesh.s@garumarajv.org",
+      "aadhaar": "890123456789",
+      "qualification": "M.A. Assamese, B.Ed",
+      "experience": "10 Years",
+      "subject": "Assamese",
+      "classTeacher": "Class IV-B",
+      "joiningDate": "2023-04-01",
+      "salary": 30000,
+      "status": "Active",
+      "address": "Amolapatty, Nagaon, Assam",
+      "emergencyContact": "9435088888",
+      "bankDetails": {
+        "bankName": "Assam Gramin Vikash Bank",
+        "accountNo": "70123456789",
+        "ifsc": "UTBI0RRBAGB"
+      },
+      "documents": []
+    }
+  ],
+  "teacherAttendance": [],
+  "teacherSalaries": [],
+  "feeStructures": {
+    "LKG": {
+      "tuitionFee": 500,
+      "admissionFee": 1200,
+      "examFee": 0,
+      "annualFee": 0,
+      "developmentFee": 0,
+      "libraryFee": 0,
+      "computerFee": 0,
+      "transportFee": 0
+    },
+    "UKG": {
+      "tuitionFee": 500,
+      "admissionFee": 2000,
+      "examFee": 0,
+      "annualFee": 0,
+      "developmentFee": 0,
+      "libraryFee": 0,
+      "computerFee": 0,
+      "transportFee": 0
+    },
+    "Class I": {
+      "tuitionFee": 500,
+      "admissionFee": 2000,
+      "examFee": 0,
+      "annualFee": 0,
+      "developmentFee": 0,
+      "libraryFee": 0,
+      "computerFee": 0,
+      "transportFee": 0
+    },
+    "Class II": {
+      "tuitionFee": 750,
+      "admissionFee": 4000,
+      "examFee": 0,
+      "annualFee": 0,
+      "developmentFee": 0,
+      "libraryFee": 0,
+      "computerFee": 0,
+      "transportFee": 0
+    },
+    "Class III": {
+      "tuitionFee": 750,
+      "admissionFee": 4000,
+      "examFee": 0,
+      "annualFee": 0,
+      "developmentFee": 0,
+      "libraryFee": 0,
+      "computerFee": 0,
+      "transportFee": 0
+    },
+    "Class IV": {
+      "tuitionFee": 750,
+      "admissionFee": 4000,
+      "examFee": 0,
+      "annualFee": 0,
+      "developmentFee": 0,
+      "libraryFee": 0,
+      "computerFee": 0,
+      "transportFee": 0
+    },
+    "Class V": {
+      "tuitionFee": 500,
+      "admissionFee": 4000,
+      "examFee": 0,
+      "annualFee": 0,
+      "developmentFee": 0,
+      "libraryFee": 0,
+      "computerFee": 0,
+      "transportFee": 0
+    },
+    "Class VI": {
+      "tuitionFee": 750,
+      "admissionFee": 4000,
+      "examFee": 0,
+      "annualFee": 0,
+      "developmentFee": 0,
+      "libraryFee": 0,
+      "computerFee": 0,
+      "transportFee": 0
+    },
+    "Class VII": {
+      "tuitionFee": 750,
+      "admissionFee": 4000,
+      "examFee": 0,
+      "annualFee": 0,
+      "developmentFee": 0,
+      "libraryFee": 0,
+      "computerFee": 0,
+      "transportFee": 0
+    },
+    "Class VIII": {
+      "tuitionFee": 750,
+      "admissionFee": 4000,
+      "examFee": 0,
+      "annualFee": 0,
+      "developmentFee": 0,
+      "libraryFee": 0,
+      "computerFee": 0,
+      "transportFee": 0
+    },
+    "Class IX": {
+      "tuitionFee": 750,
+      "admissionFee": 4000,
+      "examFee": 0,
+      "annualFee": 0,
+      "developmentFee": 0,
+      "libraryFee": 0,
+      "computerFee": 0,
+      "transportFee": 0
+    },
+    "Class X": {
+      "tuitionFee": 750,
+      "admissionFee": 4000,
+      "examFee": 0,
+      "annualFee": 0,
+      "developmentFee": 0,
+      "libraryFee": 0,
+      "computerFee": 0,
+      "transportFee": 0
+    }
+  },
+  "feeAuditLogs": [],
+  "teacherAuditLogs": [],
+  "teacherLogin": [],
+  "teacherPermissions": {},
+  "teacherLoginSessions": [],
+  "teacherActivityLogs": [],
+  "subjects": [
+    {
+      "id": "SBJ-1",
+      "name": "Assamese",
+      "code": "ASSAM-101",
+      "className": "All Classes",
+      "section": "All Sections",
+      "examType": "All Exams",
+      "session": "2026-27",
+      "maxMarks": 100,
+      "passMarks": 30,
+      "teacherId": "TCH-2026-0005",
+      "teacherName": "M.H. Anchari S",
+      "updatedAt": "2026-08-01T19:08:54.546Z",
+      "academic_session_id": "57414d3b-325b-49c8-ac1d-ab19811f8a4f"
+    },
+    {
+      "id": "SBJ-2",
+      "name": "English",
+      "code": "ENG-101",
+      "className": "All Classes",
+      "section": "All Sections",
+      "examType": "All Exams",
+      "session": "2026-27",
+      "maxMarks": 100,
+      "passMarks": 30,
+      "teacherId": "TCH-2026-0005",
+      "teacherName": "M.H. Anchari S",
+      "updatedAt": "2026-08-01T19:09:05.554Z",
+      "academic_session_id": "57414d3b-325b-49c8-ac1d-ab19811f8a4f"
+    },
+    {
+      "id": "SBJ-3",
+      "name": "Mathematics",
+      "code": "MATH-101",
+      "className": "All Classes",
+      "section": "All Sections",
+      "examType": "All Exams",
+      "session": "2026-27",
+      "maxMarks": 100,
+      "passMarks": 30,
+      "teacherId": "TCH-2026-0001",
+      "teacherName": "Pooja Baruah",
+      "updatedAt": "2026-08-01T19:09:13.652Z",
+      "academic_session_id": "57414d3b-325b-49c8-ac1d-ab19811f8a4f"
+    },
+    {
+      "id": "SBJ-4",
+      "name": "Science",
+      "code": "SCI-101",
+      "className": "All Classes",
+      "section": "All Sections",
+      "examType": "All Exams",
+      "session": "2026-27",
+      "maxMarks": 100,
+      "passMarks": 30,
+      "teacherId": "TCH-2026-0006",
+      "teacherName": "Rocky",
+      "updatedAt": "2026-08-01T19:09:21.008Z",
+      "academic_session_id": "57414d3b-325b-49c8-ac1d-ab19811f8a4f"
+    },
+    {
+      "id": "SBJ-5",
+      "name": "Social Science",
+      "code": "SOC-101",
+      "className": "All Classes",
+      "section": "All Sections",
+      "examType": "All Exams",
+      "session": "2026-27",
+      "maxMarks": 100,
+      "passMarks": 30,
+      "teacherId": "TCH-2026-0005",
+      "teacherName": "M.H. Anchari S",
+      "updatedAt": "2026-08-01T19:09:28.424Z",
+      "academic_session_id": "57414d3b-325b-49c8-ac1d-ab19811f8a4f"
+    },
+    {
+      "id": "SBJ-6",
+      "name": "Computer",
+      "code": "COMP-101",
+      "className": "All Classes",
+      "section": "All Sections",
+      "examType": "All Exams",
+      "session": "2026-27",
+      "maxMarks": 100,
+      "passMarks": 33,
+      "teacherId": "TCH-2026-0001",
+      "teacherName": "Pooja Baruah",
+      "updatedAt": "2026-08-01T08:47:54.124Z",
+      "academic_session_id": "57414d3b-325b-49c8-ac1d-ab19811f8a4f"
+    },
+    {
+      "id": "SBJ-7",
+      "name": "Environmental Science",
+      "code": "EVS-101",
+      "className": "All Classes",
+      "section": "All Sections",
+      "examType": "All Exams",
+      "session": "2026-27",
+      "maxMarks": 100,
+      "passMarks": 33,
+      "teacherId": "TCH-2026-0006",
+      "teacherName": "Rocky",
+      "updatedAt": "2026-08-01T08:48:03.269Z",
+      "academic_session_id": "57414d3b-325b-49c8-ac1d-ab19811f8a4f"
+    },
+    {
+      "id": "SBJ-1785148989030",
+      "name": "Social Science Advanced",
+      "code": "SOC-501",
+      "className": "Class VIII",
+      "section": "A",
+      "examType": "Annual Exam",
+      "session": "2026-27",
+      "maxMarks": 100,
+      "passMarks": 33,
+      "teacherId": "TCH-2026-0001",
+      "teacherName": "Pooja Baruah",
+      "createdAt": "2026-07-27T10:43:09.030Z",
+      "updatedAt": "2026-07-28T06:01:25.854Z",
+      "academic_session_id": "57414d3b-325b-49c8-ac1d-ab19811f8a4f"
+    },
+    {
+      "id": "SBJ-1786278070316",
+      "name": "Assamese",
+      "code": "ASSAM-1000",
+      "className": "All Classes",
+      "section": "All Sections",
+      "examType": "All Exams",
+      "session": "2027-28",
+      "maxMarks": 100,
+      "passMarks": 30,
+      "teacherId": "TCH-2026-0001",
+      "teacherName": "Pooja Baruah",
+      "createdAt": "2026-08-09T12:21:10.316Z",
+      "academic_session_id": "47ebb676-36ea-4c19-b002-217a6b2498a7"
+    },
+    {
+      "id": "SBJ-1786623735881",
+      "name": "English",
+      "code": "ENG-102",
+      "className": "All Classes",
+      "section": "All Sections",
+      "examType": "All Exams",
+      "session": "2027-28",
+      "maxMarks": 100,
+      "passMarks": 33,
+      "teacherId": "Unassigned",
+      "teacherName": "Unassigned",
+      "createdAt": "2026-08-13T12:22:15.881Z",
+      "academic_session_id": "47ebb676-36ea-4c19-b002-217a6b2498a7"
+    },
+    {
+      "id": "SBJ-1786623798015",
+      "name": "Science",
+      "code": "SCI-102",
+      "className": "All Classes",
+      "section": "All Sections",
+      "examType": "All Exams",
+      "session": "2027-28",
+      "maxMarks": 100,
+      "passMarks": 33,
+      "teacherId": "TCH-2026-0005",
+      "teacherName": "M.H. Anchari S",
+      "createdAt": "2026-08-13T12:23:18.015Z",
+      "academic_session_id": "47ebb676-36ea-4c19-b002-217a6b2498a7"
+    }
+  ],
+  "teacherAssignments": [],
+  "examResults": [],
+  "studentAttendance": [],
+  "teacherLeaves": [],
+  "legacyFeeDues": [],
+  "admissionApplications": [],
+  "academicSessions": [
+    {
+      "id": "57414d3b-325b-49c8-ac1d-ab19811f8a4f",
+      "session_name": "2026-27",
+      "start_date": "2026-04-01",
+      "end_date": "2027-03-31",
+      "is_active": false,
+      "status": "Closed",
+      "created_at": "2026-08-09T04:46:44.817Z",
+      "updated_at": "2026-08-20T13:23:03.122Z",
+      "migrated_at": "2026-08-09T04:46:44.817Z"
+    },
+    {
+      "id": "3dcc5c58-63ed-41ac-8bf9-fb38e0088686",
+      "session_name": "2025-26",
+      "start_date": "2025-04-01",
+      "end_date": "2026-03-31",
+      "is_active": false,
+      "status": "Archived",
+      "created_at": "2026-08-09T04:46:44.817Z",
+      "updated_at": "2026-08-20T13:23:03.122Z",
+      "migrated_at": "2026-08-09T04:46:44.817Z"
+    },
+    {
+      "id": "47ebb676-36ea-4c19-b002-217a6b2498a7",
+      "session_name": "2027-28",
+      "start_date": "2027-01-01",
+      "end_date": "2028-04-01",
+      "is_active": true,
+      "status": "Active",
+      "created_at": "2026-08-09T04:59:21.479Z",
+      "updated_at": "2026-08-20T13:23:03.122Z"
+    },
+    {
+      "id": "23141b9c-3426-4e0f-8675-ab104b9e53b2",
+      "session_name": "2026",
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "is_active": false,
+      "status": "Archived",
+      "created_at": "2026-08-20T13:19:14.528Z",
+      "updated_at": "2026-08-20T13:23:03.122Z",
+      "migrated_at": "2026-08-20T13:19:14.528Z"
+    }
+  ],
+  "feeStructuresBySession": {
+    "2026-27": {
+      "LKG": {
+        "tuitionFee": 500,
+        "admissionFee": 1200,
+        "examFee": 0,
+        "annualFee": 0,
+        "developmentFee": 0,
+        "libraryFee": 0,
+        "computerFee": 0,
+        "transportFee": 0
+      },
+      "UKG": {
+        "tuitionFee": 500,
+        "admissionFee": 2000,
+        "examFee": 0,
+        "annualFee": 0,
+        "developmentFee": 0,
+        "libraryFee": 0,
+        "computerFee": 0,
+        "transportFee": 0
+      },
+      "Class I": {
+        "tuitionFee": 500,
+        "admissionFee": 2000,
+        "examFee": 0,
+        "annualFee": 0,
+        "developmentFee": 0,
+        "libraryFee": 0,
+        "computerFee": 0,
+        "transportFee": 0
+      },
+      "Class II": {
+        "tuitionFee": 750,
+        "admissionFee": 4000,
+        "examFee": 0,
+        "annualFee": 0,
+        "developmentFee": 0,
+        "libraryFee": 0,
+        "computerFee": 0,
+        "transportFee": 0
+      },
+      "Class III": {
+        "tuitionFee": 750,
+        "admissionFee": 4000,
+        "examFee": 0,
+        "annualFee": 0,
+        "developmentFee": 0,
+        "libraryFee": 0,
+        "computerFee": 0,
+        "transportFee": 0
+      },
+      "Class IV": {
+        "tuitionFee": 750,
+        "admissionFee": 4000,
+        "examFee": 0,
+        "annualFee": 0,
+        "developmentFee": 0,
+        "libraryFee": 0,
+        "computerFee": 0,
+        "transportFee": 0
+      },
+      "Class V": {
+        "tuitionFee": 500,
+        "admissionFee": 4000,
+        "examFee": 0,
+        "annualFee": 0,
+        "developmentFee": 0,
+        "libraryFee": 0,
+        "computerFee": 0,
+        "transportFee": 0
+      },
+      "Class VI": {
+        "tuitionFee": 750,
+        "admissionFee": 4000,
+        "examFee": 0,
+        "annualFee": 0,
+        "developmentFee": 0,
+        "libraryFee": 0,
+        "computerFee": 0,
+        "transportFee": 0
+      },
+      "Class VII": {
+        "tuitionFee": 750,
+        "admissionFee": 4000,
+        "examFee": 0,
+        "annualFee": 0,
+        "developmentFee": 0,
+        "libraryFee": 0,
+        "computerFee": 0,
+        "transportFee": 0
+      },
+      "Class VIII": {
+        "tuitionFee": 750,
+        "admissionFee": 4000,
+        "examFee": 0,
+        "annualFee": 0,
+        "developmentFee": 0,
+        "libraryFee": 0,
+        "computerFee": 0,
+        "transportFee": 0
+      },
+      "Class IX": {
+        "tuitionFee": 750,
+        "admissionFee": 4000,
+        "examFee": 0,
+        "annualFee": 0,
+        "developmentFee": 0,
+        "libraryFee": 0,
+        "computerFee": 0,
+        "transportFee": 0
+      },
+      "Class X": {
+        "tuitionFee": 750,
+        "admissionFee": 4000,
+        "examFee": 0,
+        "annualFee": 0,
+        "developmentFee": 0,
+        "libraryFee": 0,
+        "computerFee": 0,
+        "transportFee": 0
+      }
+    }
+  },
+  "whatsappMessageLogs": []
+}

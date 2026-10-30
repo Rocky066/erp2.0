@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Not Found — EduPulse Cloud School ERP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" href="/logo.jpg" type="image/jpeg">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col justify-between selection:bg-rose-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="bg-slate-900/85 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-600 to-amber-500 flex items-center justify-center text-xl font-black text-white shadow-lg shadow-rose-500/25">
+          🏫
+        </div>
+        <div>
+          <span class="text-base sm:text-lg font-black tracking-tight text-white block leading-tight">EduPulse <span class="text-rose-400">Cloud</span></span>
+          <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Multi-Tenant School Platform</span>
+        </div>
+      </a>
+
+      <div class="flex items-center space-x-4 text-xs font-bold">
+        <a href="/" class="text-slate-400 hover:text-white">&larr; SaaS Homepage</a>
+        <a href="/login" class="bg-blue-600 hover:bg-blue-500 text-white px-3.5 py-1.5 rounded-xl shadow-md flex items-center space-x-1.5">
+          <span>🔍</span>
+          <span>Find School Portal</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Error Card -->
+  <main class="flex-1 flex items-center justify-center px-4 sm:px-6 py-16">
+    <div class="max-w-md w-full text-center space-y-6">
+      
+      <div class="w-20 h-20 mx-auto rounded-3xl bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center text-4xl shadow-2xl animate-pulse">
+        ⚠️
+      </div>
+
+      <div class="space-y-2">
+        <span class="inline-block bg-rose-950/60 border border-rose-800/60 text-rose-300 text-xs font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          HTTP 404 — School Instance Not Found
+        </span>
+        <h1 class="text-2xl sm:text-3xl font-black text-white tracking-tight">Unregistered School Subdomain</h1>
+        <p class="text-xs sm:text-sm text-slate-400">
+          The requested subdomain <strong class="text-rose-400 font-mono">{{SUBDOMAIN}}</strong> is not associated with any active school instance or tenant on this platform.
+        </p>
+      </div>
+
+      <!-- Detail Box -->
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 text-left space-y-4 shadow-xl">
+        <h2 class="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center space-x-2">
+          <span>❓</span>
+          <span>Why are you seeing this page?</span>
+        </h2>
+        <ul class="text-xs text-slate-400 space-y-2 list-disc pl-5">
+          <li>The school subdomain slug was mistyped or misspelled in your browser address bar.</li>
+          <li>The school institution has not completed onboarding or its trial subscription is suspended.</li>
+          <li>DNS propagation for a newly assigned custom domain CNAME is still pending.</li>
+        </ul>
+
+        <div class="pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row gap-3">
+          <a href="/login" class="flex-1 bg-blue-600 hover:bg-blue-500 text-white text-center font-bold py-2.5 px-4 rounded-xl text-xs transition-colors shadow-lg shadow-blue-600/20">
+            🔍 Portal Subdomain Finder
+          </a>
+          <a href="/" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-center font-bold py-2.5 px-4 rounded-xl text-xs border border-slate-700 transition-colors">
+            🏠 Return to Main Website
+          </a>
+        </div>
+      </div>
+
+      <p class="text-[11px] text-slate-500">
+        Are you a school administrator looking to onboard your institution? <a href="/contact" class="text-blue-400 hover:underline">Contact SaaS Sales</a> or <a href="/superadmin" class="text-blue-400 hover:underline">Super Admin Login</a>.
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-900 py-6 text-center text-xs text-slate-600">
+    <p>&copy; 2026 EduPulse Cloud SaaS Platform. Strict Multi-Tenant Isolation Enforced.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notice Board - Garumara Jatiya Vidyalaya</title>
+  <meta name="description" content="Access the active school notices, holidays, events, schedules, exam circulars, and announcements issued by the principal of GJV.">
+  <link class="no-print" rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="icon" href="/logo.jpg" type="image/jpeg">
+  <script src="/js/icon-runtime.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- Header -->
+  <header id="shared-header" class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-transparent no-print"></header>
+
+  <!-- Page Title Banner -->
+  <section class="relative pt-36 pb-16 bg-slate-900 overflow-hidden flex items-center no-print">
+    <div class="absolute inset-0 z-0">
+      <img src="uploads/school_banner.jpg" alt="Banner" class="w-full h-full object-cover brightness-50 dark:brightness-[0.25]">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+    </div>
+    <div class="container mx-auto px-6 relative z-10 space-y-3">
+      <span class="bg-amber-500/10 text-amber-500 border border-amber-500/25 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Announcements</span>
+      <h1 class="text-4xl sm:text-5xl font-black text-white">Notice Board</h1>
+    </div>
+  </section>
+
+  <!-- Notices List -->
+  <section class="py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div id="notices-page-container" class="space-y-8">
+        <!-- Notices load dynamically from app.js -->
+        <div class="animate-pulse flex space-x-4">
+          <div class="flex-1 space-y-4 py-1">
+            <div class="h-4 bg-slate-200 dark:bg-slate-800 rounded w-3/4"></div>
+            <div class="space-y-2">
+              <div class="h-3 bg-slate-200 dark:bg-slate-800 rounded"></div>
+              <div class="h-3 bg-slate-200 dark:bg-slate-800 rounded w-5/6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="shared-footer" class="bg-slate-950 text-slate-300 transition-colors duration-300 border-t border-slate-900 no-print"></footer>
+
+  <!-- Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
